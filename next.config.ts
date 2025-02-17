@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? "/your-repository-name/" : "",
-  basePath: isProd ? "/your-repository-name" : "",
+  assetPrefix: isProd ? "/cathodle/" : "",
+  basePath: isProd ? "/cathodle" : "",
   output: "export",
 };
 
