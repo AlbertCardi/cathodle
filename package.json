@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "deploy": "yarn run build && touch ./out/.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.1.6",
