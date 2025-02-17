@@ -38,7 +38,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
 
     usedVerses.forEach((reference) => {
       const [bookName, chapterVerse] = reference.split(" ");
-      const [chapter, verse] = chapterVerse.split(":");
+      const [chapter] = chapterVerse.split(":");
 
       combinations.books.add(bookName);
       combinations.chapters.add(`${bookName} ${chapter}`);
