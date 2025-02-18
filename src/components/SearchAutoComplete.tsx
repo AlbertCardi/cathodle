@@ -10,7 +10,7 @@ interface SearchAutocompleteProps {
   isShaking: boolean;
   getTypeColor: (type: SaintType) => string;
   triggerShake: () => void;
-  guessedSaints: string[]; // New prop to track guessed saints
+  guessedSaints: string[];
 }
 
 const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
@@ -78,7 +78,6 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
   };
 
   const handleSuggestionClick = (saintName: string) => {
-    console.log("YO");
     if (!guessedSaints.includes(saintName)) {
       onSelect(saintName);
       setShowSuggestions(false);
@@ -100,25 +99,27 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
           ${
             isShaking
               ? "animate-shake border-shake-border ring-2 ring-shake-ring"
-              : "border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+              : "border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900"
           } 
+          bg-white dark:bg-gray-800 
+          text-gray-900 dark:text-gray-100 
+          placeholder-gray-500 dark:placeholder-gray-400
           outline-none transition-all duration-200`}
       />
       {showSuggestions && filteredSaints.length > 0 && (
         <div
           ref={suggestionsRef}
-          className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-64 overflow-y-auto"
+          className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-64 overflow-y-auto"
         >
           {filteredSaints.map((saint) => (
             <div
               key={saint.name}
-              onClick={() => {
-                console.log("SALUT");
-                handleSuggestionClick(saint.name);
-              }}
-              className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center justify-between"
+              onClick={() => handleSuggestionClick(saint.name)}
+              className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer flex items-center justify-between"
             >
-              <span>{saint.name}</span>
+              <span className="text-gray-900 dark:text-gray-100">
+                {saint.name}
+              </span>
               <span
                 className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
                   saint.type as SaintType

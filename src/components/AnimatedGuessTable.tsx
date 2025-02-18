@@ -44,36 +44,44 @@ const AnimatedGuessTable = ({
   const CELL_DELAY = 200; // Délai entre chaque cellule en millisecondes
 
   return (
-    <div className="w-full overflow-x-auto bg-white rounded-xl shadow-lg">
+    <div className="w-full overflow-x-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg">
       <table className="w-full table-auto">
         <thead>
-          <tr className="bg-gray-50">
-            <th className="p-4 text-left font-semibold text-gray-700">Nom</th>
-            <th className="p-4 text-left font-semibold text-gray-700">Genre</th>
-            <th className="p-4 text-left font-semibold text-gray-700">
+          <tr className="bg-gray-50 dark:bg-gray-900">
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
+              Nom
+            </th>
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
+              Genre
+            </th>
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
               Période
             </th>
-            <th className="p-4 text-left font-semibold text-gray-700">
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
               Origine
             </th>
-            <th className="p-4 text-left font-semibold text-gray-700">Rôle</th>
-            <th className="p-4 text-left font-semibold text-gray-700">
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
+              Rôle
+            </th>
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
               Patronage
             </th>
-            <th className="p-4 text-left font-semibold text-gray-700">
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
               Attributs
             </th>
-            <th className="p-4 text-left font-semibold text-gray-700">
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
               Canonisation
             </th>
-            <th className="p-4 text-left font-semibold text-gray-700">Fête</th>
+            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
+              Fête
+            </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
           {guesses.map((guess, rowIndex) => (
             <tr
               key={`guess-${guess.name}-${rowIndex}`}
-              className="border-t border-gray-200"
+              className="border-t border-gray-200 dark:border-gray-700"
             >
               <AnimatedCell
                 delay={0}
@@ -82,25 +90,7 @@ const AnimatedGuessTable = ({
                   targetSaint?.name || ""
                 )}`}
               >
-                {/* {guess.name}
-                <span
-                  className={`ml-2 px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
-                    guess.type as SaintType
-                  )}`}
-                >
-                  {guess.type}
-                </span> */}
-
                 <div className="flex flex-1 gap-x-[10px] items-center">
-                  {/* <div className="w-[48px] h-[48px] overflow-hidden">
-                    <Image
-                      src={TestImg}
-                      alt={`Saint ${guess.name}`}
-                      width={48}
-                      height={48}
-                      className="w-full h-full object-cover"
-                    />
-                  </div> */}
                   <div className="flex items-center flex-row flex-1">
                     {guess.name}
                     <span
@@ -135,7 +125,7 @@ const AnimatedGuessTable = ({
                 <span className="flex items-center justify-between">
                   {guess.period}
                   {guess.period !== targetSaint.period && (
-                    <span className="ml-2">
+                    <span className="ml-2 dark:text-gray-200">
                       {comparePeriods(guess.period, targetSaint.period) < 0
                         ? "↑"
                         : "↓"}
@@ -205,7 +195,7 @@ const AnimatedGuessTable = ({
                   {guess.feastDay}
                   {guess.feastDay !== "Aucun" &&
                     guess.feastDay !== targetSaint.feastDay && (
-                      <span className="ml-2">
+                      <span className="ml-2 dark:text-gray-200">
                         {feastDayToDate(guess.feastDay) <
                         feastDayToDate(targetSaint.feastDay)
                           ? "↑"

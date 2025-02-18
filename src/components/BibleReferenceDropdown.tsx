@@ -1,15 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { Book, ChevronDown } from "lucide-react";
 
-interface BibleVerse {
-  abbrev: string;
-  name: string;
-  chapters: string[][];
-}
-
 interface BibleReferenceDropdownProps {
   onSubmit: (reference: string) => void;
-  verseData: BibleVerse[];
+  verseData: Book[];
   isShaking?: boolean;
   usedVerses?: string[];
 }
@@ -28,7 +22,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     useState<boolean>(false);
   const [showVerseDropdown, setShowVerseDropdown] = useState<boolean>(false);
 
-  // Memoized calculations for used combinations
+  // Memorized calculations for used combinations
   const usedCombinations = useMemo(() => {
     const combinations = {
       books: new Set<string>(),
@@ -48,9 +42,26 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     return combinations;
   }, [usedVerses]);
 
-  // Check if a book has any unused verses
-  const hasUnusedVerses = (bookName: string): boolean => {
-    const book = verseData.find((b) => b.name === bookName);
+  const selectedBookName = useMemo(() => {
+    return verseData.find((e) => e.abbrev === selectedBook)?.name;
+  }, [selectedBook, verseData]);
+
+  // Group books by testament
+  const groupedBooks = useMemo(() => {
+    const groups = {
+      "Ancien Testament": verseData.filter(
+        (book) => book.canon === "Ancien Testament"
+      ),
+      "Nouveau Testament": verseData.filter(
+        (book) => book.canon === "Nouveau Testament"
+      ),
+    };
+    return groups;
+  }, [verseData]);
+
+  // Utility functions
+  const hasUnusedVerses = (abbrev: string): boolean => {
+    const book = verseData.find((b) => b.abbrev === abbrev);
     if (!book) return false;
 
     for (
@@ -60,7 +71,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     ) {
       const chapter = book.chapters[chapterIndex];
       for (let verseIndex = 0; verseIndex < chapter.length; verseIndex++) {
-        const reference = `${bookName} ${chapterIndex + 1}:${verseIndex + 1}`;
+        const reference = `${abbrev} ${chapterIndex + 1}:${verseIndex + 1}`;
         if (!usedCombinations.verses.has(reference)) {
           return true;
         }
@@ -69,12 +80,11 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     return false;
   };
 
-  // Check if a chapter has any unused verses
   const hasUnusedChapterVerses = (
     bookName: string,
     chapter: number
   ): boolean => {
-    const book = verseData.find((b) => b.name === bookName);
+    const book = verseData.find((b) => b.abbrev === bookName);
     if (!book) return false;
 
     const verses = book.chapters[chapter - 1];
@@ -89,17 +99,15 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     return false;
   };
 
-  // Get available chapters for selected book
   const getChapters = (): number[] => {
-    const book = verseData.find((b) => b.name === selectedBook);
+    const book = verseData.find((b) => b.abbrev === selectedBook);
     return book
       ? Array.from({ length: book.chapters.length }, (_, i) => i + 1)
       : [];
   };
 
-  // Get available verses for selected chapter
   const getVerses = (): number[] => {
-    const book = verseData.find((b) => b.name === selectedBook);
+    const book = verseData.find((b) => b.abbrev === selectedBook);
     if (!book || !selectedChapter) return [];
     return Array.from(
       { length: book.chapters[parseInt(selectedChapter) - 1].length },
@@ -111,7 +119,6 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     if (selectedBook && selectedChapter && selectedVerse) {
       const reference = `${selectedBook} ${selectedChapter}:${selectedVerse}`;
       if (!usedCombinations.verses.has(reference)) {
-        console.log("reference:", reference);
         onSubmit(reference);
         setSelectedBook("");
         setSelectedChapter("");
@@ -141,7 +148,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
         <div className="relative flex-1">
           <button
             type="button"
-            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
+            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
               isShaking ? "animate-shake" : ""
             }`}
             onClick={() => {
@@ -150,42 +157,52 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
             }}
           >
             <span className="flex items-center gap-2">
-              <Book size={20} className="text-gray-400" />
-              <span className="text-gray-700">
-                {selectedBook || "Sélectionner un livre"}
+              <Book size={20} className="text-gray-400 dark:text-gray-500" />
+              <span className="text-gray-700 dark:text-gray-200">
+                {selectedBookName || "Sélectionner un livre"}
               </span>
             </span>
-            <ChevronDown size={20} className="text-gray-400" />
+            <ChevronDown
+              size={20}
+              className="text-gray-400 dark:text-gray-500"
+            />
           </button>
 
           {showBookDropdown && (
-            <div className="absolute z-20 w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 max-h-60 overflow-y-auto">
-              {verseData.map((book) => {
-                const hasUnused = hasUnusedVerses(book.name);
-                return (
-                  <div
-                    key={book.name}
-                    className={`px-4 py-2 ${
-                      hasUnused
-                        ? "hover:bg-gray-100 cursor-pointer"
-                        : "bg-gray-50 text-gray-400 cursor-not-allowed"
-                    }`}
-                    onClick={() => {
-                      if (hasUnused) {
-                        setSelectedBook(book.name);
-                        setSelectedChapter("");
-                        setSelectedVerse("");
-                        closeAllDropdowns();
-                      }
-                    }}
-                  >
-                    {book.name}
-                    {!hasUnused && (
-                      <span className="text-xs ml-2">(Tous utilisés)</span>
-                    )}
+            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
+              {Object.entries(groupedBooks).map(([testament, books]) => (
+                <div key={testament}>
+                  <div className="px-4 py-2 bg-gray-100 dark:bg-gray-900 font-semibold text-gray-700 dark:text-gray-200 sticky top-0">
+                    {testament}
                   </div>
-                );
-              })}
+                  {books.map((book) => {
+                    const hasUnused = hasUnusedVerses(book.abbrev);
+                    return (
+                      <div
+                        key={book.abbrev}
+                        className={`px-4 py-2 ${
+                          hasUnused
+                            ? "hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-200"
+                            : "bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-500 cursor-not-allowed"
+                        }`}
+                        onClick={() => {
+                          if (hasUnused) {
+                            setSelectedBook(book.abbrev);
+                            setSelectedChapter("");
+                            setSelectedVerse("");
+                            closeAllDropdowns();
+                          }
+                        }}
+                      >
+                        {book.name}
+                        {!hasUnused && (
+                          <span className="text-xs ml-2">(Tous utilisés)</span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -194,7 +211,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
         <div className="relative flex-1">
           <button
             type="button"
-            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
+            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
               isShaking ? "animate-shake" : ""
             } ${!selectedBook ? "opacity-50 cursor-not-allowed" : ""}`}
             onClick={() => {
@@ -205,16 +222,19 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
             }}
             disabled={!selectedBook}
           >
-            <span className="text-gray-700">
+            <span className="text-gray-700 dark:text-gray-200">
               {selectedChapter
                 ? `Chapitre ${selectedChapter}`
                 : "Sélectionner chapitre"}
             </span>
-            <ChevronDown size={20} className="text-gray-400" />
+            <ChevronDown
+              size={20}
+              className="text-gray-400 dark:text-gray-500"
+            />
           </button>
 
           {showChapterDropdown && (
-            <div className="absolute z-20 w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 max-h-60 overflow-y-auto">
+            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
               <div className="grid grid-cols-6 gap-1 p-2">
                 {getChapters().map((chapter) => {
                   const hasUnused = hasUnusedChapterVerses(
@@ -226,8 +246,8 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                       key={chapter}
                       className={`px-2 py-1 text-center rounded ${
                         hasUnused
-                          ? "hover:bg-blue-100 cursor-pointer"
-                          : "bg-gray-50 text-gray-400 cursor-not-allowed"
+                          ? "hover:bg-blue-100 dark:hover:bg-blue-900 cursor-pointer text-gray-700 dark:text-gray-200"
+                          : "bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-500 cursor-not-allowed"
                       }`}
                       onClick={() => {
                         if (hasUnused) {
@@ -250,7 +270,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
         <div className="relative flex-1">
           <button
             type="button"
-            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
+            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
               isShaking ? "animate-shake" : ""
             } ${!selectedChapter ? "opacity-50 cursor-not-allowed" : ""}`}
             onClick={() => {
@@ -261,16 +281,19 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
             }}
             disabled={!selectedChapter}
           >
-            <span className="text-gray-700">
+            <span className="text-gray-700 dark:text-gray-200">
               {selectedVerse
                 ? `Verset ${selectedVerse}`
                 : "Sélectionner verset"}
             </span>
-            <ChevronDown size={20} className="text-gray-400" />
+            <ChevronDown
+              size={20}
+              className="text-gray-400 dark:text-gray-500"
+            />
           </button>
 
           {showVerseDropdown && (
-            <div className="absolute z-20 w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 max-h-60 overflow-y-auto">
+            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
               <div className="grid grid-cols-6 gap-1 p-2">
                 {getVerses().map((verse) => {
                   const reference = `${selectedBook} ${selectedChapter}:${verse}`;
@@ -280,8 +303,8 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                       key={verse}
                       className={`px-2 py-1 text-center rounded ${
                         isUsed
-                          ? "bg-gray-50 text-gray-400 cursor-not-allowed"
-                          : "hover:bg-blue-100 cursor-pointer"
+                          ? "bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-500 cursor-not-allowed"
+                          : "hover:bg-blue-100 dark:hover:bg-blue-900 cursor-pointer text-gray-700 dark:text-gray-200"
                       }`}
                       onClick={() => {
                         if (!isUsed) {
@@ -307,8 +330,8 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
           disabled={!isSelectionComplete || isReferenceUsed}
           className={`px-6 py-2 rounded-lg shadow transition-all duration-200 ${
             isSelectionComplete && !isReferenceUsed
-              ? "bg-blue-600 hover:bg-blue-700 text-white"
-              : "bg-gray-100 text-gray-400 cursor-not-allowed"
+              ? "bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-800 text-white"
+              : "bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-not-allowed"
           }`}
         >
           {isReferenceUsed

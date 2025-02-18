@@ -7,7 +7,7 @@ import BibleReferenceDropdown from "@/components/BibleReferenceDropdown";
 import { ChevronUp, ChevronDown, CheckCircle, XCircle } from "lucide-react";
 import VERSES from "@/constants/verses.json";
 
-// Utility to get a random verse from the data
+// Utility functions remain the same
 const getCurrentDayVerse = (): TargetVerse => {
   const currentDate = new Date(getCurrentDate());
   const timestamp = currentDate.getTime();
@@ -28,10 +28,10 @@ const getCurrentDayVerse = (): TargetVerse => {
 };
 
 const getVerseText = (reference: string): string | null => {
-  const [bookName, chapterVerse] = reference.split(" ");
+  const [bookAbbrev, chapterVerse] = reference.split(" ");
   const [chapter, verse] = chapterVerse.split(":").map(Number);
 
-  const book = VERSES.find((b) => b.name === bookName);
+  const book = VERSES.find((b) => b.abbrev === bookAbbrev);
   if (!book) return null;
 
   return book.chapters[chapter - 1]?.[verse - 1] ?? null;
@@ -47,7 +47,6 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
   const guessRef = parseReference(guess);
   const targetRef = parseReference(target);
 
-  // Vérifier le livre
   if (guessRef.book !== targetRef.book) {
     return {
       bookStatus: false,
@@ -57,7 +56,6 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
     };
   }
 
-  // Si le livre est correct, vérifier le chapitre
   if (guessRef.chapter !== targetRef.chapter) {
     return {
       bookStatus: true,
@@ -69,7 +67,6 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
     };
   }
 
-  // Si livre et chapitre corrects, vérifier le verset
   if (guessRef.verse !== targetRef.verse) {
     return {
       bookStatus: true,
@@ -81,7 +78,6 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
     };
   }
 
-  // Tout est correct
   return {
     bookStatus: true,
     chapterHint: "correct",
@@ -97,9 +93,7 @@ export default function VersetsPage() {
   const [isShaking, setIsShaking] = useState(false);
   const [incorrectGuesses, setIncorrectGuesses] = useState(0);
 
-  // Initialize game state
   useEffect(() => {
-    console.log("allo");
     const initializeGame = () => {
       if (gameStorage.hasVerseGame()) {
         const savedState = gameStorage.loadVerseGameState();
@@ -113,7 +107,6 @@ export default function VersetsPage() {
         }
       }
 
-      console.log("init");
       const newTargetVerse = getCurrentDayVerse();
       setTargetVerse(newTargetVerse);
       gameStorage.saveVerseGameState({
@@ -128,7 +121,6 @@ export default function VersetsPage() {
     initializeGame();
   }, []);
 
-  // Save game state when it changes
   useEffect(() => {
     if (targetVerse) {
       gameStorage.saveVerseGameState({
@@ -144,27 +136,28 @@ export default function VersetsPage() {
   const handleGuess = (guessReference: string) => {
     const guessText = getVerseText(guessReference);
 
-    console.log(guessText, "before:", guessReference);
     if (!guessText) {
       triggerShake();
       return;
     }
 
     const feedback = getGuessFeedback(guessReference, targetVerse!.reference);
-
+    const { book: bookAbbrev, chapter, verse } = parseReference(guessReference);
+    const book = VERSES.find((e) => e.abbrev === bookAbbrev);
     const newGuess: VerseGuess = {
-      reference: guessReference,
+      reference: `${bookAbbrev} ${chapter}:${verse}`,
+      input: `${book?.name} ${chapter}:${verse}`,
       text: guessText,
       feedback,
     };
 
+    console.log("Reference:", guessReference);
     if (guessReference === targetVerse?.reference) {
       setGameWon(true);
     } else {
       setIncorrectGuesses(incorrectGuesses + 1);
     }
 
-    console.log("new guess:", newGuess);
     setGuesses([newGuess, ...guesses]);
   };
 
@@ -176,20 +169,20 @@ export default function VersetsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
             Devine le Verset
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
             Trouvez le verset mystère à partir de son contenu !
           </p>
         </div>
 
         {/* Target verse display */}
-        <div className="mb-8 p-6 bg-white rounded-xl shadow-lg">
-          <p className="text-lg text-gray-700 text-center italic">
+        <div className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+          <p className="text-lg text-gray-700 dark:text-gray-200 text-center italic">
             {targetVerse && `"${targetVerse?.text}"`}
           </p>
         </div>
@@ -206,15 +199,15 @@ export default function VersetsPage() {
         )}
 
         {gameWon && (
-          <div className="mb-8 p-6 bg-emerald-100 rounded-xl shadow-lg text-center">
-            <h2 className="text-2xl font-bold text-emerald-800 mb-2">
+          <div className="mb-8 p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
+            <h2 className="text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
               Félicitations !
             </h2>
-            <p className="text-emerald-700 mb-4">
+            <p className="text-emerald-700 dark:text-emerald-300 mb-4">
               Vous avez trouvé le verset en {guesses.length} essai
               {guesses.length > 1 ? "s" : ""} !
             </p>
-            <p className="text-emerald-700 font-semibold">
+            <p className="text-emerald-700 dark:text-emerald-300 font-semibold">
               {targetVerse?.reference}
             </p>
           </div>
@@ -224,42 +217,45 @@ export default function VersetsPage() {
         {guesses.length > 0 && (
           <div className="space-y-4">
             {guesses.map((guess, index) => (
-              <div key={index} className="p-4 rounded-lg shadow bg-white">
+              <div
+                key={index}
+                className="p-4 rounded-lg shadow bg-white dark:bg-gray-800"
+              >
                 <div className="space-y-2">
                   {/* Reference and feedback */}
                   <div className="flex justify-between items-start gap-4">
                     <div className="flex-1">
-                      <p className="font-semibold text-gray-700 mb-1 flex items-center gap-2">
-                        {guess.reference}
+                      <p className="font-semibold text-gray-700 dark:text-gray-200 mb-1 flex items-center gap-2">
+                        {guess.input}
                         <span className="flex items-center gap-1">
                           {guess.feedback.bookStatus ? (
-                            <CheckCircle className="text-emerald-500 w-5 h-5" />
+                            <CheckCircle className="text-emerald-500 dark:text-emerald-400 w-5 h-5" />
                           ) : (
-                            <XCircle className="text-red-500 w-5 h-5" />
+                            <XCircle className="text-red-500 dark:text-red-400 w-5 h-5" />
                           )}
                           {guess.feedback.chapterHint === "up" && (
-                            <ChevronUp className="text-orange-500" />
+                            <ChevronUp className="text-orange-500 dark:text-orange-400" />
                           )}
                           {guess.feedback.chapterHint === "down" && (
-                            <ChevronDown className="text-orange-500" />
+                            <ChevronDown className="text-orange-500 dark:text-orange-400" />
                           )}
                           {guess.feedback.verseHint === "up" && (
-                            <ChevronUp className="text-orange-500" />
+                            <ChevronUp className="text-orange-500 dark:text-orange-400" />
                           )}
                           {guess.feedback.verseHint === "down" && (
-                            <ChevronDown className="text-orange-500" />
+                            <ChevronDown className="text-orange-500 dark:text-orange-400" />
                           )}
                         </span>
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
                         {guess.feedback.statusText}
                       </p>
                     </div>
                   </div>
 
                   {/* Verse text */}
-                  <div className="pt-2 border-t">
-                    <p className="text-gray-700 italic">{`"${guess.text}"`}</p>
+                  <div className="pt-2 border-t dark:border-gray-700">
+                    <p className="text-gray-700 dark:text-gray-300 italic">{`"${guess.text}"`}</p>
                   </div>
                 </div>
               </div>
@@ -271,7 +267,7 @@ export default function VersetsPage() {
           <div className="flex justify-center mt-6 gap-4">
             <Link
               href="/"
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
             >
               Retour aux Saints
             </Link>

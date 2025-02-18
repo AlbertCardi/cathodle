@@ -95,50 +95,57 @@ export default function Home() {
 
   const getTypeColor = (type: SaintType) => {
     const colors = {
-      Biblique: "bg-violet-200 text-violet-800",
-      Ancien: "bg-amber-200 text-amber-800",
-      Médiéval: "bg-emerald-200 text-emerald-800",
-      Moderne: "bg-orange-200 text-orange-800",
-      Contemporain: "bg-rose-200 text-rose-800",
+      Biblique:
+        "bg-violet-200 dark:bg-violet-800 text-violet-800 dark:text-violet-200",
+      Ancien:
+        "bg-amber-200 dark:bg-amber-800 text-amber-800 dark:text-amber-200",
+      Médiéval:
+        "bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-200",
+      Moderne:
+        "bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200",
+      Contemporain:
+        "bg-rose-200 dark:bg-rose-800 text-rose-800 dark:text-rose-200",
     };
-    return colors[type] || "bg-gray-200 text-gray-800";
+    return (
+      colors[type] ||
+      "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+    );
   };
 
   const getCellStyle = (value1: string, value2: string, field?: string) => {
-    if (!value1 || !value2) return "bg-gray-200 text-gray-800";
+    if (!value1 || !value2)
+      return "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200";
 
     if (field === "feastDay") {
       if (value1 === "Aucun" || value2 === "Aucun") {
         if (value1 === value2) {
-          return "bg-emerald-500 text-white";
+          return "bg-emerald-500 dark:bg-emerald-700 text-white";
         }
-        return "bg-red-500 text-white flex-1";
+        return "bg-red-500 dark:bg-red-700 text-white flex-1";
       }
 
       const date1 = feastDayToDate(value1);
       const date2 = feastDayToDate(value2);
 
       if (date1.getTime() === date2.getTime()) {
-        return "bg-emerald-500 text-white";
+        return "bg-emerald-500 dark:bg-emerald-700 text-white";
       }
 
-      return date1 < date2
-        ? "bg-red-500 text-white flex-1"
-        : "bg-red-500 text-white flex-1";
+      return "bg-red-500 dark:bg-red-700 text-white flex-1";
     }
 
     if (field === "attributes" || field === "patronage") {
       if (normalizeString(value1) === normalizeString(value2)) {
-        return "bg-emerald-500 text-white";
+        return "bg-emerald-500 dark:bg-emerald-700 text-white";
       }
       if (hasCommonElement(value1, value2)) {
-        return "bg-orange-500 text-white";
+        return "bg-orange-500 dark:bg-orange-700 text-white";
       }
-      return "bg-red-500 text-white";
+      return "bg-red-500 dark:bg-red-700 text-white";
     }
 
     if (normalizeString(value1) === normalizeString(value2)) {
-      return "bg-emerald-500 text-white";
+      return "bg-emerald-500 dark:bg-emerald-700 text-white";
     }
 
     const words1 = normalizeString(value1)
@@ -152,20 +159,20 @@ export default function Home() {
     );
 
     if (hasPartialMatch) {
-      return "bg-yellow-500 text-white";
+      return "bg-yellow-500 dark:bg-yellow-700 text-white";
     }
 
-    return "bg-red-500 text-white";
+    return "bg-red-500 dark:bg-red-700 text-white";
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
             Devine le Saint
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
             Devinez le saint mystère en utilisant les indices !
           </p>
         </div>
@@ -187,15 +194,15 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          <div className="mb-8 p-6 bg-emerald-100 rounded-xl shadow-lg text-center">
-            <h2 className="text-2xl font-bold text-emerald-800 mb-2">
+          <div className="mb-8 p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
+            <h2 className="text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
               Félicitations !
             </h2>
-            <p className="text-emerald-700 mb-4">
+            <p className="text-emerald-700 dark:text-emerald-300 mb-4">
               Vous avez trouvé le saint en {guesses.length} essai
               {guesses.length > 1 ? "s" : ""} !
             </p>
-            <div className="text-emerald-700">
+            <div className="text-emerald-700 dark:text-emerald-300">
               <p className="font-semibold text-lg">Saint {targetSaint!.name}</p>
               <p>Fêté le {targetSaint!.feastDay}</p>
               <p>Saint patron : {targetSaint!.patronage}</p>
@@ -216,7 +223,7 @@ export default function Home() {
         {gameWon && (
           <div className="flex justify-center mt-6 gap-4">
             <Link
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               href={`/versets`}
             >
               Devine le verset

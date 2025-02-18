@@ -29,6 +29,8 @@ interface TargetVerse {
 type Book = {
   name: string;
   abbrev: string;
+  group: string;
+  canon: string;
   chapters: Array<string[]>;
 };
 
@@ -41,6 +43,7 @@ interface GuessFeedback {
 
 interface VerseGuess {
   reference: string;
+  input: string;
   text: string;
   feedback: GuessFeedback;
 }
