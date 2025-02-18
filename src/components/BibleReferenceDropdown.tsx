@@ -337,7 +337,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
           {isReferenceUsed
             ? "Verset déjà utilisé"
             : isSelectionComplete
-            ? `Valider ${selectedBook} ${selectedChapter}:${selectedVerse}`
+            ? `Valider ${selectedBookName} ${selectedChapter}:${selectedVerse}`
             : "Sélectionnez un verset"}
         </button>
       </div>

@@ -23,14 +23,6 @@ const VERSE_COOKIE_NAMES = {
   incorrectGuesses: `${VERSE_COOKIE_PREFIX}incorrect`,
 } as const;
 
-interface TargetVerse {
-  book: string;
-  chapter: number;
-  verse: number;
-  text: string;
-  reference: string;
-}
-
 interface SaintGameState {
   currentDay: string;
   targetSaint: Saint | null;

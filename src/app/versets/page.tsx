@@ -24,6 +24,7 @@ const getCurrentDayVerse = (): TargetVerse => {
     verse: verseIndex + 1,
     text: chapter[verseIndex],
     reference: `${book.name} ${chapterIndex + 1}:${verseIndex + 1}`,
+    input: `${book?.abbrev} ${chapterIndex + 1}:${verseIndex + 1}`,
   };
 };
 
@@ -47,12 +48,33 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
   const guessRef = parseReference(guess);
   const targetRef = parseReference(target);
 
+  // Trouver les livres complets pour avoir accès aux informations supplémentaires
+  const guessBook = VERSES.find((b) => b.abbrev === guessRef.book);
+  const targetBook = VERSES.find((b) => b.abbrev === targetRef.book);
+
+  if (!guessBook || !targetBook) {
+    throw new Error("Livre non trouvé");
+  }
+
+  const testamentFeedback = {
+    value: guessBook.canon as "Ancient Testament" | "Nouveau Testament",
+    isCorrect: guessBook.canon === targetBook.canon,
+  };
+
+  const groupFeedback = {
+    value: guessBook.group,
+    isCorrect: guessBook.group === targetBook.group,
+    hasCommonGroup: guessBook.group === targetBook.group,
+  };
+
   if (guessRef.book !== targetRef.book) {
     return {
       bookStatus: false,
       chapterHint: null,
       verseHint: null,
-      statusText: "Mauvais livre",
+      statusText: "",
+      testament: testamentFeedback,
+      group: groupFeedback,
     };
   }
 
@@ -64,6 +86,8 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
       statusText: `Chapitre ${
         guessRef.chapter < targetRef.chapter ? "plus grand" : "plus petit"
       }`,
+      testament: testamentFeedback,
+      group: groupFeedback,
     };
   }
 
@@ -75,6 +99,8 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
       statusText: `Verset ${
         guessRef.verse < targetRef.verse ? "plus grand" : "plus petit"
       }`,
+      testament: testamentFeedback,
+      group: groupFeedback,
     };
   }
 
@@ -83,6 +109,8 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
     chapterHint: "correct",
     verseHint: "correct",
     statusText: "Correct !",
+    testament: testamentFeedback,
+    group: groupFeedback,
   };
 };
 
@@ -141,7 +169,7 @@ export default function VersetsPage() {
       return;
     }
 
-    const feedback = getGuessFeedback(guessReference, targetVerse!.reference);
+    const feedback = getGuessFeedback(guessReference, targetVerse!.input);
     const { book: bookAbbrev, chapter, verse } = parseReference(guessReference);
     const book = VERSES.find((e) => e.abbrev === bookAbbrev);
     const newGuess: VerseGuess = {
@@ -151,7 +179,6 @@ export default function VersetsPage() {
       feedback,
     };
 
-    console.log("Reference:", guessReference);
     if (guessReference === targetVerse?.reference) {
       setGameWon(true);
     } else {
@@ -222,7 +249,6 @@ export default function VersetsPage() {
                 className="p-4 rounded-lg shadow bg-white dark:bg-gray-800"
               >
                 <div className="space-y-2">
-                  {/* Reference and feedback */}
                   <div className="flex justify-between items-start gap-4">
                     <div className="flex-1">
                       <p className="font-semibold text-gray-700 dark:text-gray-200 mb-1 flex items-center gap-2">
@@ -247,13 +273,36 @@ export default function VersetsPage() {
                           )}
                         </span>
                       </p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex gap-2 text-sm">
+                        <span
+                          className={`px-2 py-1 rounded-full ${
+                            guess.feedback.testament.isCorrect
+                              ? "bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300"
+                              : "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
+                          }`}
+                        >
+                          {guess.feedback.testament.value === "Ancien Testament"
+                            ? "Ancien Testament"
+                            : "Nouveau Testament"}
+                        </span>
+                        <span
+                          className={`px-2 py-1 rounded-full ${
+                            guess.feedback.group.isCorrect
+                              ? "bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300"
+                              : guess.feedback.group.hasCommonGroup
+                              ? "bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300"
+                              : "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
+                          }`}
+                        >
+                          {guess.feedback.group.value}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                         {guess.feedback.statusText}
                       </p>
                     </div>
                   </div>
 
-                  {/* Verse text */}
                   <div className="pt-2 border-t dark:border-gray-700">
                     <p className="text-gray-700 dark:text-gray-300 italic">{`"${guess.text}"`}</p>
                   </div>

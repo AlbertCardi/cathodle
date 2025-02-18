@@ -24,6 +24,7 @@ interface TargetVerse {
   verse: number; // Numéro du verset
   text: string; // Texte du verset
   reference: string; // Format complet "Livre Chapitre:Verset"
+  input: string;
 }
 
 type Book = {
@@ -34,18 +35,27 @@ type Book = {
   chapters: Array<string[]>;
 };
 
-interface GuessFeedback {
-  bookStatus: boolean;
-  chapterHint: "up" | "down" | "correct" | null;
-  verseHint: "up" | "down" | "correct" | null;
-  statusText: string;
-}
-
 interface VerseGuess {
   reference: string;
   input: string;
   text: string;
   feedback: GuessFeedback;
+}
+
+interface GuessFeedback {
+  bookStatus: boolean;
+  chapterHint: "up" | "down" | "correct" | null;
+  verseHint: "up" | "down" | "correct" | null;
+  statusText: string;
+  testament: {
+    value: string;
+    isCorrect: boolean;
+  };
+  group: {
+    value: string;
+    isCorrect: boolean;
+    hasCommonGroup: boolean;
+  };
 }
 
 declare module "@/constants/verses.json" {
