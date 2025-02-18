@@ -1,5 +1,17 @@
 [
   {
+    "name": "Jésus-Christ",
+    "period": "1er siècle",
+    "origin": "Bethléem, Palestine",
+    "role": "Sauveur, Fils de Dieu",
+    "patronage": "Humanité",
+    "attributes": "Croix, Couronne d'épines, Pain et Vin",
+    "canonization": "Divin",
+    "gender": "Homme",
+    "feastDay": "25 décembre",
+    "type": "Biblique"
+  },
+  {
     "name": "Marie",
     "period": "1er siècle",
     "origin": "Nazareth, Palestine",
@@ -538,5 +550,125 @@
     "gender": "Homme",
     "feastDay": "29 juillet",
     "type": "Biblique"
+  },
+  {
+    "name": "Saint Georges",
+    "period": "3e siècle",
+    "origin": "Cappadoce, Turquie",
+    "role": "Martyr",
+    "patronage": "Chevaliers, Angleterre",
+    "attributes": "Dragon, Lance, Armure",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "23 avril",
+    "type": "Ancien"
+  },
+  {
+    "name": "Sainte Cécile",
+    "period": "3e siècle",
+    "origin": "Rome, Italie",
+    "role": "Martyre",
+    "patronage": "Musique, Musiciens",
+    "attributes": "Orgue, Harpe, Lys",
+    "canonization": "Culte immémorial",
+    "gender": "Femme",
+    "feastDay": "22 novembre",
+    "type": "Ancien"
+  },
+  {
+    "name": "Saint Christophe",
+    "period": "3e siècle",
+    "origin": "Canaan",
+    "role": "Martyr",
+    "patronage": "Voyageurs, Automobilistes",
+    "attributes": "Enfant Jésus sur l'épaule, Bâton",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "25 juillet",
+    "type": "Ancien"
+  },
+  {
+    "name": "Saint Benoît",
+    "period": "6e siècle",
+    "origin": "Nursie, Italie",
+    "role": "Fondateur d'ordre",
+    "patronage": "Europe, Moines",
+    "attributes": "Règle monastique, Corbeau",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "11 juillet",
+    "type": "Médiéval"
+  },
+  {
+    "name": "Sainte Claire",
+    "period": "13e siècle",
+    "origin": "Assise, Italie",
+    "role": "Fondatrice d'ordre",
+    "patronage": "Télévision, Communications",
+    "attributes": "Ostensoir, Lys",
+    "canonization": "1255",
+    "gender": "Femme",
+    "feastDay": "11 août",
+    "type": "Médiéval"
+  },
+  {
+    "name": "Saint Dominique",
+    "period": "13e siècle",
+    "origin": "Caleruega, Espagne",
+    "role": "Fondateur d'ordre",
+    "patronage": "Astronomes, Prédicateurs",
+    "attributes": "Étoile au front, Chien avec torche",
+    "canonization": "1234",
+    "gender": "Homme",
+    "feastDay": "8 août",
+    "type": "Médiéval"
+  },
+  {
+    "name": "Sainte Rita",
+    "period": "15e siècle",
+    "origin": "Roccaporena, Italie",
+    "role": "Religieuse",
+    "patronage": "Causes impossibles",
+    "attributes": "Épine, Roses",
+    "canonization": "1900",
+    "gender": "Femme",
+    "feastDay": "22 mai",
+    "type": "Médiéval"
+  },
+  {
+    "name": "Saint François Xavier",
+    "period": "16e siècle",
+    "origin": "Navarre, Espagne",
+    "role": "Missionnaire",
+    "patronage": "Missions étrangères",
+    "attributes": "Crucifix, Cloche",
+    "canonization": "1622",
+    "gender": "Homme",
+    "feastDay": "3 décembre",
+    "type": "Moderne"
+  },
+  {
+    "name": "Saint Don Bosco",
+    "period": "19e siècle",
+    "origin": "Turin, Italie",
+    "role": "Fondateur d'ordre",
+    "patronage": "Jeunes, Apprentis",
+    "attributes": "Soutane, Jeunes garçons",
+    "canonization": "1934",
+    "gender": "Homme",
+    "feastDay": "31 janvier",
+    "type": "Moderne"
+  },
+  {
+    "name": "Saint Maximilien Kolbe",
+    "period": "20e siècle",
+    "origin": "Zduńska Wola, Pologne",
+    "role": "Martyr",
+    "patronage": "Prisonniers, Journalistes",
+    "attributes": "Habits franciscains, Numéro de prisonnier",
+    "canonization": "1982",
+    "gender": "Homme",
+    "feastDay": "14 août",
+    "type": "Contemporain"
   }
 ]
