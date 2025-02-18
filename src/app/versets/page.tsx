@@ -16,7 +16,7 @@ const getCurrentDayVerse = (): TargetVerse => {
   const book = VERSES[bookIndex];
   const chapterIndex = timestamp % book.chapters.length;
   const chapter = book.chapters[chapterIndex];
-  const verseIndex = timestamp % chapter[chapterIndex].length;
+  const verseIndex = timestamp % chapter.length;
 
   return {
     book: book.name,
@@ -99,6 +99,7 @@ export default function VersetsPage() {
 
   // Initialize game state
   useEffect(() => {
+    console.log("allo");
     const initializeGame = () => {
       if (gameStorage.hasVerseGame()) {
         const savedState = gameStorage.loadVerseGameState();
@@ -112,6 +113,7 @@ export default function VersetsPage() {
         }
       }
 
+      console.log("init");
       const newTargetVerse = getCurrentDayVerse();
       setTargetVerse(newTargetVerse);
       gameStorage.saveVerseGameState({
