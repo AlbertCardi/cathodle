@@ -219,7 +219,7 @@ export default function Home() {
               className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               href={`/versets`}
             >
-              Prochain Jeu
+              Devine le verset
             </Link>
           </div>
         )}
