@@ -3,7 +3,7 @@
     "name": "Jésus-Christ",
     "period": "1er siècle",
     "origin": "Bethléem, Palestine",
-    "role": "Sauveur, Fils de Dieu",
+    "role": "Sauveur, Enfant de Dieu",
     "patronage": "Humanité",
     "attributes": "Croix, Couronne d'épines, Pain et Vin",
     "canonization": "Divin",
@@ -15,7 +15,7 @@
     "name": "Marie",
     "period": "1er siècle",
     "origin": "Nazareth, Palestine",
-    "role": "Mère de Jésus",
+    "role": "Parent de Jésus",
     "patronage": "Mères, Marins",
     "attributes": "Manteau bleu, Lys, Couronne d'étoiles",
     "canonization": "Culte immémorial",
@@ -51,7 +51,7 @@
     "name": "Joseph",
     "period": "1er siècle",
     "origin": "Bethléem, Palestine",
-    "role": "Père adoptif de Jésus",
+    "role": "Parent adoptif de Jésus",
     "patronage": "Pères, Charpentiers",
     "attributes": "Lys, Outils de charpentier",
     "canonization": "Culte immémorial",
@@ -171,7 +171,7 @@
     "name": "Jeanne d'Arc",
     "period": "15e siècle",
     "origin": "Domrémy, France",
-    "role": "Guerrière",
+    "role": "Guerrier",
     "patronage": "France",
     "attributes": "Armure, Étendard",
     "canonization": "1920",
@@ -207,7 +207,7 @@
     "name": "Bernadette",
     "period": "19e siècle",
     "origin": "Lourdes, France",
-    "role": "Voyante",
+    "role": "Voyant",
     "patronage": "Malades",
     "attributes": "Chapelet, Grotte",
     "canonization": "1933",
@@ -387,7 +387,7 @@
     "name": "Judas Iscariote",
     "period": "1er siècle",
     "origin": "Kérioth, Palestine",
-    "role": "Apôtre déchu",
+    "role": "Apôtre",
     "patronage": "Aucun",
     "attributes": "Bourse, Corde",
     "canonization": "Non canonisé",
@@ -399,7 +399,7 @@
     "name": "Matthias",
     "period": "1er siècle",
     "origin": "Judée, Palestine",
-    "role": "Apôtre (remplaçant de Judas)",
+    "role": "Apôtre",
     "patronage": "Charpentiers, Tailleurs",
     "attributes": "Hache, Lance",
     "canonization": "Culte immémorial",
@@ -507,7 +507,7 @@
     "name": "Anne",
     "period": "1er siècle av. J.-C.",
     "origin": "Bethléem, Palestine",
-    "role": "Mère de Marie",
+    "role": "Parent de Marie",
     "patronage": "Grand-mères, Ménagères",
     "attributes": "Livre, Manteau",
     "canonization": "Culte immémorial",
@@ -519,7 +519,7 @@
     "name": "Joachim",
     "period": "1er siècle av. J.-C.",
     "origin": "Nazareth, Palestine",
-    "role": "Père de Marie",
+    "role": "Parent de Marie",
     "patronage": "Grands-pères, Pères",
     "attributes": "Bâton, Colombes",
     "canonization": "Culte immémorial",
@@ -531,7 +531,7 @@
     "name": "Marthe",
     "period": "1er siècle",
     "origin": "Béthanie, Palestine",
-    "role": "Hôtesse du Christ",
+    "role": "Hôte du Christ",
     "patronage": "Cuisiniers, Hôteliers",
     "attributes": "Goupillon, Dragon",
     "canonization": "Culte immémorial",
@@ -552,7 +552,7 @@
     "type": "Biblique"
   },
   {
-    "name": "Saint Georges",
+    "name": "Georges",
     "period": "3e siècle",
     "origin": "Cappadoce, Turquie",
     "role": "Martyr",
@@ -564,10 +564,10 @@
     "type": "Ancien"
   },
   {
-    "name": "Sainte Cécile",
+    "name": "Cécile",
     "period": "3e siècle",
     "origin": "Rome, Italie",
-    "role": "Martyre",
+    "role": "Martyr",
     "patronage": "Musique, Musiciens",
     "attributes": "Orgue, Harpe, Lys",
     "canonization": "Culte immémorial",
@@ -576,7 +576,7 @@
     "type": "Ancien"
   },
   {
-    "name": "Saint Christophe",
+    "name": "Christophe",
     "period": "3e siècle",
     "origin": "Canaan",
     "role": "Martyr",
@@ -588,7 +588,7 @@
     "type": "Ancien"
   },
   {
-    "name": "Saint Benoît",
+    "name": "Benoît",
     "period": "6e siècle",
     "origin": "Nursie, Italie",
     "role": "Fondateur d'ordre",
@@ -600,10 +600,10 @@
     "type": "Médiéval"
   },
   {
-    "name": "Sainte Claire",
+    "name": "Claire",
     "period": "13e siècle",
     "origin": "Assise, Italie",
-    "role": "Fondatrice d'ordre",
+    "role": "Fondateur d'ordre",
     "patronage": "Télévision, Communications",
     "attributes": "Ostensoir, Lys",
     "canonization": "1255",
@@ -612,7 +612,7 @@
     "type": "Médiéval"
   },
   {
-    "name": "Saint Dominique",
+    "name": "Dominique",
     "period": "13e siècle",
     "origin": "Caleruega, Espagne",
     "role": "Fondateur d'ordre",
@@ -624,10 +624,10 @@
     "type": "Médiéval"
   },
   {
-    "name": "Sainte Rita",
+    "name": "Rita",
     "period": "15e siècle",
     "origin": "Roccaporena, Italie",
-    "role": "Religieuse",
+    "role": "Religieux",
     "patronage": "Causes impossibles",
     "attributes": "Épine, Roses",
     "canonization": "1900",
@@ -636,7 +636,7 @@
     "type": "Médiéval"
   },
   {
-    "name": "Saint François Xavier",
+    "name": "François Xavier",
     "period": "16e siècle",
     "origin": "Navarre, Espagne",
     "role": "Missionnaire",
@@ -648,7 +648,7 @@
     "type": "Moderne"
   },
   {
-    "name": "Saint Don Bosco",
+    "name": "Don Bosco",
     "period": "19e siècle",
     "origin": "Turin, Italie",
     "role": "Fondateur d'ordre",
@@ -660,7 +660,7 @@
     "type": "Moderne"
   },
   {
-    "name": "Saint Maximilien Kolbe",
+    "name": "Maximilien Kolbe",
     "period": "20e siècle",
     "origin": "Zduńska Wola, Pologne",
     "role": "Martyr",

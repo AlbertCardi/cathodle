@@ -158,7 +158,7 @@ export default function Home() {
       words2.some((w2) => w2.includes(w1) || w1.includes(w2))
     );
 
-    if (hasPartialMatch) {
+    if (hasPartialMatch && field !== "period") {
       return "bg-yellow-500 dark:bg-yellow-700 text-white";
     }
 
