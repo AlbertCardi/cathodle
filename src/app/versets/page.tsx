@@ -20,6 +20,7 @@ const getCurrentDayVerse = (): TargetVerse => {
 
   return {
     book: book.name,
+    abbrev: book.abbrev,
     chapter: chapterIndex + 1,
     verse: verseIndex + 1,
     text: chapter[verseIndex],
@@ -221,6 +222,7 @@ export default function VersetsPage() {
               onSubmit={handleGuess}
               isShaking={isShaking}
               usedVerses={guesses.map((guess) => guess.reference)}
+              targetVerse={targetVerse!}
             />
           </div>
         )}

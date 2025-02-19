@@ -20,6 +20,7 @@ type SaintType =
 
 interface TargetVerse {
   book: string; // Nom du livre (ex: "Genèse")
+  abbrev: string;
   chapter: number; // Numéro du chapitre
   verse: number; // Numéro du verset
   text: string; // Texte du verset

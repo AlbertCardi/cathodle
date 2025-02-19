@@ -6,6 +6,7 @@ interface BibleReferenceDropdownProps {
   verseData: Book[];
   isShaking?: boolean;
   usedVerses?: string[];
+  targetVerse: TargetVerse;
 }
 
 const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
@@ -13,6 +14,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
   verseData,
   isShaking = false,
   usedVerses = [],
+  targetVerse,
 }) => {
   const [selectedBook, setSelectedBook] = useState<string>("");
   const [selectedChapter, setSelectedChapter] = useState<string>("");
@@ -144,8 +146,15 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
       const reference = `${selectedBook} ${selectedChapter}:${selectedVerse}`;
       if (!usedCombinations.verses.has(reference)) {
         onSubmit(reference);
-        setSelectedBook("");
-        setSelectedChapter("");
+        if (targetVerse.abbrev !== selectedBook) {
+          setSelectedBook("");
+        }
+        if (
+          targetVerse.abbrev !== selectedBook ||
+          targetVerse.chapter.toString() !== selectedChapter
+        ) {
+          setSelectedChapter("");
+        }
         setSelectedVerse("");
       }
     }
