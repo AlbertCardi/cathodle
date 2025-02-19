@@ -115,6 +115,30 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
     );
   };
 
+  const handleBookSelection = (abbrev: string) => {
+    if (abbrev !== selectedBook) {
+      setSelectedBook(abbrev);
+      setSelectedChapter("");
+      setSelectedVerse("");
+    }
+    closeAllDropdowns();
+  };
+
+  const handleChapterSelection = (chapter: string) => {
+    if (chapter !== selectedChapter) {
+      setSelectedChapter(chapter);
+      setSelectedVerse("");
+    }
+    closeAllDropdowns();
+  };
+
+  const handleVerseSelection = (verse: string) => {
+    if (verse !== selectedVerse) {
+      setSelectedVerse(verse);
+    }
+    closeAllDropdowns();
+  };
+
   const handleSubmit = (): void => {
     if (selectedBook && selectedChapter && selectedVerse) {
       const reference = `${selectedBook} ${selectedChapter}:${selectedVerse}`;
@@ -187,16 +211,20 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                         }`}
                         onClick={() => {
                           if (hasUnused) {
-                            setSelectedBook(book.abbrev);
-                            setSelectedChapter("");
-                            setSelectedVerse("");
-                            closeAllDropdowns();
+                            handleBookSelection(book.abbrev);
                           }
                         }}
                       >
-                        {book.name}
+                        <div className="flex justify-between items-center">
+                          <span>{book.name}</span>
+                          <span className="text-sm text-gray-500 dark:text-gray-400">
+                            {book.group}
+                          </span>
+                        </div>
                         {!hasUnused && (
-                          <span className="text-xs ml-2">(Tous utilisés)</span>
+                          <span className="text-xs block mt-1">
+                            (Tous utilisés)
+                          </span>
                         )}
                       </div>
                     );
@@ -251,9 +279,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                       }`}
                       onClick={() => {
                         if (hasUnused) {
-                          setSelectedChapter(chapter.toString());
-                          setSelectedVerse("");
-                          closeAllDropdowns();
+                          handleChapterSelection(chapter.toString());
                         }
                       }}
                     >
@@ -308,8 +334,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                       }`}
                       onClick={() => {
                         if (!isUsed) {
-                          setSelectedVerse(verse.toString());
-                          closeAllDropdowns();
+                          handleVerseSelection(verse.toString());
                         }
                       }}
                     >

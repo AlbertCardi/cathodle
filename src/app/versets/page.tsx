@@ -72,7 +72,7 @@ const getGuessFeedback = (guess: string, target: string): GuessFeedback => {
       bookStatus: false,
       chapterHint: null,
       verseHint: null,
-      statusText: "",
+      statusText: `Mauvais livre`,
       testament: testamentFeedback,
       group: groupFeedback,
     };
@@ -161,16 +161,16 @@ export default function VersetsPage() {
     }
   }, [targetVerse, guesses, gameWon, incorrectGuesses]);
 
-  const handleGuess = (guessReference: string) => {
-    const guessText = getVerseText(guessReference);
+  const handleGuess = (guessInput: string) => {
+    const guessText = getVerseText(guessInput);
 
     if (!guessText) {
       triggerShake();
       return;
     }
 
-    const feedback = getGuessFeedback(guessReference, targetVerse!.input);
-    const { book: bookAbbrev, chapter, verse } = parseReference(guessReference);
+    const feedback = getGuessFeedback(guessInput, targetVerse!.input);
+    const { book: bookAbbrev, chapter, verse } = parseReference(guessInput);
     const book = VERSES.find((e) => e.abbrev === bookAbbrev);
     const newGuess: VerseGuess = {
       reference: `${bookAbbrev} ${chapter}:${verse}`,
@@ -179,7 +179,7 @@ export default function VersetsPage() {
       feedback,
     };
 
-    if (guessReference === targetVerse?.reference) {
+    if (guessInput === targetVerse?.input) {
       setGameWon(true);
     } else {
       setIncorrectGuesses(incorrectGuesses + 1);
