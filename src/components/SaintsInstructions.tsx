@@ -86,7 +86,7 @@ const SaintsInstructions = () => {
                 <span className="px-2 py-1 bg-amber-200 dark:bg-amber-800 text-amber-800 dark:text-amber-200 rounded-full text-xs">
                   Ancien
                 </span>
-                <span>Premiers siècles de l'Église</span>
+                <span>Premiers siècles de l&apos;Église</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="px-2 py-1 bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-200 rounded-full text-xs">
