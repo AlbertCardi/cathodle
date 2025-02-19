@@ -41,173 +41,184 @@ const AnimatedGuessTable = ({
   getCellStyle,
   getTypeColor,
 }: AnimatedGuessTableProps) => {
-  const CELL_DELAY = 200; // Délai entre chaque cellule en millisecondes
+  const CELL_DELAY = 200;
 
   return (
     <div className="w-full overflow-x-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-      <table className="w-full table-auto">
-        <thead>
-          <tr className="bg-gray-50 dark:bg-gray-900">
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Nom
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Genre
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Période
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Origine
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Rôle
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Patronage
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Attributs
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Canonisation
-            </th>
-            <th className="p-4 text-left font-semibold text-gray-700 dark:text-gray-200">
-              Fête
-            </th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-          {guesses.map((guess, rowIndex) => (
-            <tr
-              key={`guess-${guess.name}-${rowIndex}`}
-              className="border-t border-gray-200 dark:border-gray-700"
-            >
-              <AnimatedCell
-                delay={0}
-                className={`p-4 ${getCellStyle(
-                  guess.name,
-                  targetSaint?.name || ""
-                )}`}
+      <div className="min-w-[800px]">
+        {" "}
+        {/* Minimum width container for horizontal scroll */}
+        <table className="w-full table-auto">
+          <thead>
+            <tr className="bg-gray-50 dark:bg-gray-900">
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Nom
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Genre
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Période
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Origine
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Rôle
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Patronage
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Attributs
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Canonisation
+              </th>
+              <th className="p-2 sm:p-4 text-left font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base whitespace-nowrap">
+                Fête
+              </th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            {guesses.map((guess, rowIndex) => (
+              <tr
+                key={`guess-${guess.name}-${rowIndex}`}
+                className="border-t border-gray-200 dark:border-gray-700"
               >
-                <div className="flex flex-1 gap-x-[10px] items-center">
-                  <div className="flex items-center flex-row flex-1">
-                    {guess.name}
-                    <span
-                      className={`ml-2 px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
-                        guess.type as SaintType
-                      )}`}
-                    >
-                      {guess.type}
-                    </span>
+                <AnimatedCell
+                  delay={0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base ${getCellStyle(
+                    guess.name,
+                    targetSaint?.name || ""
+                  )}`}
+                >
+                  <div className="flex flex-1 gap-x-2 items-center min-w-0">
+                    <div className="flex items-center flex-row flex-1 min-w-0">
+                      <span className="truncate">{guess.name}</span>
+                      <span
+                        className={`ml-2 px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${getTypeColor(
+                          guess.type as SaintType
+                        )}`}
+                      >
+                        {guess.type}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </AnimatedCell>
+                </AnimatedCell>
 
-              <AnimatedCell
-                delay={rowIndex === 0 ? CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.gender,
-                  targetSaint.gender
-                )}`}
-              >
-                {guess.gender}
-              </AnimatedCell>
+                <AnimatedCell
+                  delay={rowIndex === 0 ? CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base whitespace-nowrap ${getCellStyle(
+                    guess.gender,
+                    targetSaint.gender
+                  )}`}
+                >
+                  {guess.gender}
+                </AnimatedCell>
 
-              <AnimatedCell
-                delay={rowIndex === 0 ? 2 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.period,
-                  targetSaint.period,
-                  "period"
-                )}`}
-              >
-                <span className="flex items-center justify-between">
-                  {guess.period}
-                  {guess.period !== targetSaint.period && (
-                    <span className="ml-2 dark:text-gray-200">
-                      {comparePeriods(guess.period, targetSaint.period) < 0
-                        ? "↑"
-                        : "↓"}
-                    </span>
-                  )}
-                </span>
-              </AnimatedCell>
-
-              <AnimatedCell
-                delay={rowIndex === 0 ? 3 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.origin,
-                  targetSaint.origin
-                )}`}
-              >
-                {guess.origin}
-              </AnimatedCell>
-
-              <AnimatedCell
-                delay={rowIndex === 0 ? 4 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(guess.role, targetSaint.role)}`}
-              >
-                {guess.role}
-              </AnimatedCell>
-
-              <AnimatedCell
-                delay={rowIndex === 0 ? 5 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.patronage,
-                  targetSaint.patronage,
-                  "patronage"
-                )}`}
-              >
-                {guess.patronage}
-              </AnimatedCell>
-
-              <AnimatedCell
-                delay={rowIndex === 0 ? 6 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.attributes,
-                  targetSaint.attributes,
-                  "attributes"
-                )}`}
-              >
-                {guess.attributes}
-              </AnimatedCell>
-
-              <AnimatedCell
-                delay={rowIndex === 0 ? 7 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.canonization,
-                  targetSaint.canonization
-                )}`}
-              >
-                {guess.canonization}
-              </AnimatedCell>
-
-              <AnimatedCell
-                delay={rowIndex === 0 ? 8 * CELL_DELAY : 0}
-                className={`p-4 ${getCellStyle(
-                  guess.feastDay,
-                  targetSaint.feastDay,
-                  "feastDay"
-                )}`}
-              >
-                <span className="flex items-center justify-between">
-                  {guess.feastDay}
-                  {guess.feastDay !== "Aucun" &&
-                    guess.feastDay !== targetSaint.feastDay && (
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 2 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base ${getCellStyle(
+                    guess.period,
+                    targetSaint.period,
+                    "period"
+                  )}`}
+                >
+                  <span className="flex items-center justify-between whitespace-nowrap">
+                    {guess.period}
+                    {guess.period !== targetSaint.period && (
                       <span className="ml-2 dark:text-gray-200">
-                        {feastDayToDate(guess.feastDay) <
-                        feastDayToDate(targetSaint.feastDay)
+                        {comparePeriods(guess.period, targetSaint.period) < 0
                           ? "↑"
                           : "↓"}
                       </span>
                     )}
-                </span>
-              </AnimatedCell>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                  </span>
+                </AnimatedCell>
+
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 3 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base whitespace-nowrap ${getCellStyle(
+                    guess.origin,
+                    targetSaint.origin
+                  )}`}
+                >
+                  {guess.origin}
+                </AnimatedCell>
+
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 4 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base whitespace-nowrap ${getCellStyle(
+                    guess.role,
+                    targetSaint.role
+                  )}`}
+                >
+                  {guess.role}
+                </AnimatedCell>
+
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 5 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base ${getCellStyle(
+                    guess.patronage,
+                    targetSaint.patronage,
+                    "patronage"
+                  )}`}
+                >
+                  <div>
+                    {guess.patronage}
+                  </div>
+                </AnimatedCell>
+
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 6 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base ${getCellStyle(
+                    guess.attributes,
+                    targetSaint.attributes,
+                    "attributes"
+                  )}`}
+                >
+                  <div>
+                    {guess.attributes}
+                  </div>
+                </AnimatedCell>
+
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 7 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base whitespace-nowrap ${getCellStyle(
+                    guess.canonization,
+                    targetSaint.canonization
+                  )}`}
+                >
+                  {guess.canonization}
+                </AnimatedCell>
+
+                <AnimatedCell
+                  delay={rowIndex === 0 ? 8 * CELL_DELAY : 0}
+                  className={`p-2 sm:p-4 text-sm sm:text-base ${getCellStyle(
+                    guess.feastDay,
+                    targetSaint.feastDay,
+                    "feastDay"
+                  )}`}
+                >
+                  <span className="flex items-center justify-between whitespace-nowrap">
+                    {guess.feastDay}
+                    {guess.feastDay !== "Aucun" &&
+                      guess.feastDay !== targetSaint.feastDay && (
+                        <span className="ml-2 dark:text-gray-200">
+                          {feastDayToDate(guess.feastDay) <
+                          feastDayToDate(targetSaint.feastDay)
+                            ? "↑"
+                            : "↓"}
+                        </span>
+                      )}
+                  </span>
+                </AnimatedCell>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

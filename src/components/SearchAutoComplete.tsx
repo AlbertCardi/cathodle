@@ -86,7 +86,7 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
   };
 
   return (
-    <div className="relative w-64">
+    <div className="relative w-full sm:w-80 md:w-96">
       <input
         ref={inputRef}
         type="text"
@@ -95,7 +95,7 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
         onKeyDown={handleKeyDown}
         onFocus={() => setShowSuggestions(true)}
         placeholder="Entrez le nom d'un saint"
-        className={`w-full px-4 py-2 rounded-lg border-2 
+        className={`w-full px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg border-2 
           ${
             isShaking
               ? "animate-shake border-shake-border ring-2 ring-shake-ring"
@@ -109,19 +109,19 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
       {showSuggestions && filteredSaints.length > 0 && (
         <div
           ref={suggestionsRef}
-          className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-64 overflow-y-auto"
+          className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-48 sm:max-h-64 overflow-y-auto"
         >
           {filteredSaints.map((saint) => (
             <div
               key={saint.name}
               onClick={() => handleSuggestionClick(saint.name)}
-              className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer flex items-center justify-between"
+              className="px-3 sm:px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer flex items-center justify-between gap-2"
             >
-              <span className="text-gray-900 dark:text-gray-100">
+              <span className="text-gray-900 dark:text-gray-100 text-sm sm:text-base truncate">
                 {saint.name}
               </span>
               <span
-                className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
+                className={`px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${getTypeColor(
                   saint.type as SaintType
                 )}`}
               >

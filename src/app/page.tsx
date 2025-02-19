@@ -12,6 +12,7 @@ import SearchAutocomplete from "@/components/SearchAutoComplete";
 import AnimatedGuessTable from "@/components/AnimatedGuessTable";
 import Link from "next/link";
 import { gameStorage } from "@/lib/gameStorage";
+import SaintsInstructions from "@/components/SaintsInstructions";
 
 export default function Home() {
   const [targetSaint, setTargetSaint] = useState<Saint | null>(null);
@@ -166,20 +167,22 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+        <div className="text-center mb-6 md:mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
             Devine le Saint
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">
+          <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300">
             Devinez le saint mystère en utilisant les indices !
           </p>
         </div>
 
+        <SaintsInstructions />
+
         {!gameWon ? (
-          <div className="mb-8">
-            <div className="flex gap-4 justify-center mb-4">
+          <div className="mb-6 md:mb-8">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center mb-4">
               <SearchAutocomplete
                 saints={SAINTS}
                 value={currentGuess}
@@ -194,36 +197,46 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          <div className="mb-8 p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
-            <h2 className="text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
+          <div className="mb-6 md:mb-8 p-4 md:p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
+            <h2 className="text-xl md:text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
               Félicitations !
             </h2>
-            <p className="text-emerald-700 dark:text-emerald-300 mb-4">
+            <p className="text-sm md:text-base text-emerald-700 dark:text-emerald-300 mb-4">
               Vous avez trouvé le saint en {guesses.length} essai
               {guesses.length > 1 ? "s" : ""} !
             </p>
-            <div className="text-emerald-700 dark:text-emerald-300">
-              <p className="font-semibold text-lg">Saint {targetSaint!.name}</p>
-              <p>Fêté le {targetSaint!.feastDay}</p>
-              <p>Saint patron : {targetSaint!.patronage}</p>
-              <p>Attributs : {targetSaint!.attributes}</p>
+            <div className="text-emerald-700 dark:text-emerald-300 space-y-2">
+              <p className="font-semibold text-base md:text-lg">
+                Saint {targetSaint!.name}
+              </p>
+              <p className="text-sm md:text-base">
+                Fêté le {targetSaint!.feastDay}
+              </p>
+              <p className="text-sm md:text-base">
+                Saint patron : {targetSaint!.patronage}
+              </p>
+              <p className="text-sm md:text-base">
+                Attributs : {targetSaint!.attributes}
+              </p>
             </div>
           </div>
         )}
 
-        {guesses.length > 0 && (
-          <AnimatedGuessTable
-            guesses={guesses}
-            targetSaint={targetSaint!}
-            getCellStyle={getCellStyle}
-            getTypeColor={getTypeColor}
-          />
-        )}
+        <div className="overflow-x-auto">
+          {guesses.length > 0 && (
+            <AnimatedGuessTable
+              guesses={guesses}
+              targetSaint={targetSaint!}
+              getCellStyle={getCellStyle}
+              getTypeColor={getTypeColor}
+            />
+          )}
+        </div>
 
         {gameWon && (
-          <div className="flex justify-center mt-6 gap-4">
+          <div className="flex justify-center mt-4 md:mt-6 gap-4">
             <Link
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+              className="px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               href={`/versets`}
             >
               Devine le verset

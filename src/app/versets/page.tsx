@@ -6,6 +6,7 @@ import { compareDates, getCurrentDate } from "@/lib/utils";
 import BibleReferenceDropdown from "@/components/BibleReferenceDropdown";
 import { ChevronUp, ChevronDown, CheckCircle, XCircle } from "lucide-react";
 import VERSES from "@/constants/verses.json";
+import VersetsInstructions from "@/components/VersetsInstructions";
 
 // Utility functions remain the same
 const getCurrentDayVerse = (): TargetVerse => {
@@ -197,26 +198,28 @@ export default function VersetsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4 sm:p-6">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
             Devine le Verset
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">
+          <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-300">
             Trouvez le verset mystère à partir de son contenu !
           </p>
         </div>
 
+        <VersetsInstructions />
+
         {/* Target verse display */}
-        <div className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-          <p className="text-lg text-gray-700 dark:text-gray-200 text-center italic">
+        <div className="mb-6 sm:mb-8 p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-200 text-center italic">
             {targetVerse && `"${targetVerse?.text}"`}
           </p>
         </div>
 
         {!gameWon && (
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <BibleReferenceDropdown
               verseData={VERSES}
               onSubmit={handleGuess}
@@ -228,15 +231,15 @@ export default function VersetsPage() {
         )}
 
         {gameWon && (
-          <div className="mb-8 p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
-            <h2 className="text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
+          <div className="mb-6 sm:mb-8 p-4 sm:p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
+            <h2 className="text-xl sm:text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
               Félicitations !
             </h2>
-            <p className="text-emerald-700 dark:text-emerald-300 mb-4">
+            <p className="text-sm sm:text-base text-emerald-700 dark:text-emerald-300 mb-4">
               Vous avez trouvé le verset en {guesses.length} essai
               {guesses.length > 1 ? "s" : ""} !
             </p>
-            <p className="text-emerald-700 dark:text-emerald-300 font-semibold">
+            <p className="text-sm sm:text-base text-emerald-700 dark:text-emerald-300 font-semibold">
               {targetVerse?.reference}
             </p>
           </div>
@@ -244,38 +247,38 @@ export default function VersetsPage() {
 
         {/* Previous guesses */}
         {guesses.length > 0 && (
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {guesses.map((guess, index) => (
               <div
                 key={index}
-                className="p-4 rounded-lg shadow bg-white dark:bg-gray-800"
+                className="p-3 sm:p-4 rounded-lg shadow bg-white dark:bg-gray-800"
               >
                 <div className="space-y-2">
-                  <div className="flex justify-between items-start gap-4">
-                    <div className="flex-1">
-                      <p className="font-semibold text-gray-700 dark:text-gray-200 mb-1 flex items-center gap-2">
-                        {guess.input}
-                        <span className="flex items-center gap-1">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-gray-700 dark:text-gray-200 mb-1 flex items-center gap-2 text-sm sm:text-base">
+                        <span className="truncate">{guess.input}</span>
+                        <span className="flex items-center gap-1 shrink-0">
                           {guess.feedback.bookStatus ? (
-                            <CheckCircle className="text-emerald-500 dark:text-emerald-400 w-5 h-5" />
+                            <CheckCircle className="text-emerald-500 dark:text-emerald-400 w-4 h-4 sm:w-5 sm:h-5" />
                           ) : (
-                            <XCircle className="text-red-500 dark:text-red-400 w-5 h-5" />
+                            <XCircle className="text-red-500 dark:text-red-400 w-4 h-4 sm:w-5 sm:h-5" />
                           )}
                           {guess.feedback.chapterHint === "up" && (
-                            <ChevronUp className="text-orange-500 dark:text-orange-400" />
+                            <ChevronUp className="text-orange-500 dark:text-orange-400 w-4 h-4 sm:w-5 sm:h-5" />
                           )}
                           {guess.feedback.chapterHint === "down" && (
-                            <ChevronDown className="text-orange-500 dark:text-orange-400" />
+                            <ChevronDown className="text-orange-500 dark:text-orange-400 w-4 h-4 sm:w-5 sm:h-5" />
                           )}
                           {guess.feedback.verseHint === "up" && (
-                            <ChevronUp className="text-orange-500 dark:text-orange-400" />
+                            <ChevronUp className="text-orange-500 dark:text-orange-400 w-4 h-4 sm:w-5 sm:h-5" />
                           )}
                           {guess.feedback.verseHint === "down" && (
-                            <ChevronDown className="text-orange-500 dark:text-orange-400" />
+                            <ChevronDown className="text-orange-500 dark:text-orange-400 w-4 h-4 sm:w-5 sm:h-5" />
                           )}
                         </span>
                       </p>
-                      <div className="flex gap-2 text-sm">
+                      <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
                         <span
                           className={`px-2 py-1 rounded-full ${
                             guess.feedback.testament.isCorrect
@@ -299,14 +302,16 @@ export default function VersetsPage() {
                           {guess.feedback.group.value}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
                         {guess.feedback.statusText}
                       </p>
                     </div>
                   </div>
 
                   <div className="pt-2 border-t dark:border-gray-700">
-                    <p className="text-gray-700 dark:text-gray-300 italic">{`"${guess.text}"`}</p>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 italic">
+                      {`"${guess.text}"`}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -315,10 +320,10 @@ export default function VersetsPage() {
         )}
 
         {gameWon && (
-          <div className="flex justify-center mt-6 gap-4">
+          <div className="flex justify-center mt-4 sm:mt-6">
             <Link
               href="/"
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+              className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-center text-sm sm:text-base"
             >
               Retour aux Saints
             </Link>

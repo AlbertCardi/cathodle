@@ -176,12 +176,12 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
 
   return (
     <div className="space-y-4">
-      <div className="relative w-full max-w-3xl mx-auto flex gap-4">
+      <div className="relative w-full max-w-3xl mx-auto flex flex-col sm:flex-row gap-2 sm:gap-4">
         {/* Book Dropdown */}
         <div className="relative flex-1">
           <button
             type="button"
-            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
+            className={`w-full px-3 sm:px-4 py-2 sm:py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm sm:text-base ${
               isShaking ? "animate-shake" : ""
             }`}
             onClick={() => {
@@ -189,23 +189,26 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
               setShowBookDropdown(!showBookDropdown);
             }}
           >
-            <span className="flex items-center gap-2">
-              <Book size={20} className="text-gray-400 dark:text-gray-500" />
-              <span className="text-gray-700 dark:text-gray-200">
+            <span className="flex items-center gap-2 min-w-0">
+              <Book
+                size={18}
+                className="text-gray-400 dark:text-gray-500 shrink-0"
+              />
+              <span className="text-gray-700 dark:text-gray-200 truncate">
                 {selectedBookName || "Sélectionner un livre"}
               </span>
             </span>
             <ChevronDown
-              size={20}
-              className="text-gray-400 dark:text-gray-500"
+              size={18}
+              className="text-gray-400 dark:text-gray-500 shrink-0"
             />
           </button>
 
           {showBookDropdown && (
-            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
+            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-48 sm:max-h-60 overflow-y-auto">
               {Object.entries(groupedBooks).map(([testament, books]) => (
                 <div key={testament}>
-                  <div className="px-4 py-2 bg-gray-100 dark:bg-gray-900 font-semibold text-gray-700 dark:text-gray-200 sticky top-0">
+                  <div className="px-3 sm:px-4 py-2 bg-gray-100 dark:bg-gray-900 font-semibold text-gray-700 dark:text-gray-200 sticky top-0 text-sm sm:text-base">
                     {testament}
                   </div>
                   {books.map((book) => {
@@ -213,7 +216,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                     return (
                       <div
                         key={book.abbrev}
-                        className={`px-4 py-2 ${
+                        className={`px-3 sm:px-4 py-2 ${
                           hasUnused
                             ? "hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-200"
                             : "bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-500 cursor-not-allowed"
@@ -224,9 +227,9 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                           }
                         }}
                       >
-                        <div className="flex justify-between items-center">
-                          <span>{book.name}</span>
-                          <span className="text-sm text-gray-500 dark:text-gray-400">
+                        <div className="flex justify-between items-center text-sm sm:text-base">
+                          <span className="truncate">{book.name}</span>
+                          <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 ml-2 shrink-0">
                             {book.group}
                           </span>
                         </div>
@@ -248,7 +251,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
         <div className="relative flex-1">
           <button
             type="button"
-            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
+            className={`w-full px-3 sm:px-4 py-2 sm:py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm sm:text-base ${
               isShaking ? "animate-shake" : ""
             } ${!selectedBook ? "opacity-50 cursor-not-allowed" : ""}`}
             onClick={() => {
@@ -259,20 +262,20 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
             }}
             disabled={!selectedBook}
           >
-            <span className="text-gray-700 dark:text-gray-200">
+            <span className="text-gray-700 dark:text-gray-200 truncate">
               {selectedChapter
                 ? `Chapitre ${selectedChapter}`
                 : "Sélectionner chapitre"}
             </span>
             <ChevronDown
-              size={20}
-              className="text-gray-400 dark:text-gray-500"
+              size={18}
+              className="text-gray-400 dark:text-gray-500 shrink-0"
             />
           </button>
 
           {showChapterDropdown && (
-            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
-              <div className="grid grid-cols-6 gap-1 p-2">
+            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-48 sm:max-h-60 overflow-y-auto">
+              <div className="grid grid-cols-4 sm:grid-cols-6 gap-1 p-2">
                 {getChapters().map((chapter) => {
                   const hasUnused = hasUnusedChapterVerses(
                     selectedBook,
@@ -281,7 +284,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
                   return (
                     <div
                       key={chapter}
-                      className={`px-2 py-1 text-center rounded ${
+                      className={`px-2 py-1 text-center rounded text-sm sm:text-base ${
                         hasUnused
                           ? "hover:bg-blue-100 dark:hover:bg-blue-900 cursor-pointer text-gray-700 dark:text-gray-200"
                           : "bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-500 cursor-not-allowed"
@@ -305,7 +308,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
         <div className="relative flex-1">
           <button
             type="button"
-            className={`w-full px-4 py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm ${
+            className={`w-full px-3 sm:px-4 py-2 sm:py-3 text-left flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm sm:text-base ${
               isShaking ? "animate-shake" : ""
             } ${!selectedChapter ? "opacity-50 cursor-not-allowed" : ""}`}
             onClick={() => {
@@ -316,27 +319,27 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
             }}
             disabled={!selectedChapter}
           >
-            <span className="text-gray-700 dark:text-gray-200">
+            <span className="text-gray-700 dark:text-gray-200 truncate">
               {selectedVerse
                 ? `Verset ${selectedVerse}`
                 : "Sélectionner verset"}
             </span>
             <ChevronDown
-              size={20}
-              className="text-gray-400 dark:text-gray-500"
+              size={18}
+              className="text-gray-400 dark:text-gray-500 shrink-0"
             />
           </button>
 
           {showVerseDropdown && (
-            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
-              <div className="grid grid-cols-6 gap-1 p-2">
+            <div className="absolute z-20 w-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-48 sm:max-h-60 overflow-y-auto">
+              <div className="grid grid-cols-4 sm:grid-cols-6 gap-1 p-2">
                 {getVerses().map((verse) => {
                   const reference = `${selectedBook} ${selectedChapter}:${verse}`;
                   const isUsed = usedCombinations.verses.has(reference);
                   return (
                     <div
                       key={verse}
-                      className={`px-2 py-1 text-center rounded ${
+                      className={`px-2 py-1 text-center rounded text-sm sm:text-base ${
                         isUsed
                           ? "bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-500 cursor-not-allowed"
                           : "hover:bg-blue-100 dark:hover:bg-blue-900 cursor-pointer text-gray-700 dark:text-gray-200"
@@ -362,7 +365,7 @@ const BibleReferenceDropdown: React.FC<BibleReferenceDropdownProps> = ({
         <button
           onClick={handleSubmit}
           disabled={!isSelectionComplete || isReferenceUsed}
-          className={`px-6 py-2 rounded-lg shadow transition-all duration-200 ${
+          className={`px-4 sm:px-6 py-2 rounded-lg shadow transition-all duration-200 text-sm sm:text-base w-full sm:w-auto ${
             isSelectionComplete && !isReferenceUsed
               ? "bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-800 text-white"
               : "bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-not-allowed"
