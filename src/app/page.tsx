@@ -197,52 +197,48 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          <div className="mb-6 md:mb-8 p-4 md:p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
-              {targetSaint?.name === "Judas Iscariote"
-                ? "Personnage trouvé !"
-                : "Félicitations !"}
-            </h2>
-            <p className="text-sm md:text-base text-emerald-700 dark:text-emerald-300 mb-4">
-              Vous avez trouvé{" "}
-              {targetSaint?.name === "Judas Iscariote"
-                ? "le personnage"
-                : "le saint"}{" "}
-              en {guesses.length} essai
-              {guesses.length > 1 ? "s" : ""} !
-            </p>
-            <div className="text-emerald-700 dark:text-emerald-300 space-y-2">
-              {targetSaint?.name === "Judas Iscariote" ? (
-                <>
-                  <p className="font-semibold text-base md:text-lg">
-                    {targetSaint?.name}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Période : {targetSaint?.period}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Rôle : {targetSaint?.role}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Attributs : {targetSaint?.attributes}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="font-semibold text-base md:text-lg">
-                    Saint {targetSaint?.name}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Fêté le {targetSaint?.feastDay}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Saint patron : {targetSaint?.patronage}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Attributs : {targetSaint?.attributes}
-                  </p>
-                </>
-              )}
+          <div className="mb-6 md:mb-8 p-4 md:p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg">
+            <div className="text-center mb-6">
+              <h2 className="text-xl md:text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
+                {targetSaint?.name === "Judas Iscariote"
+                  ? "Personnage trouvé !"
+                  : "Félicitations !"}
+              </h2>
+              <p className="text-sm md:text-base text-emerald-700 dark:text-emerald-300 mb-4">
+                Vous avez trouvé{" "}
+                {targetSaint?.name === "Judas Iscariote"
+                  ? "le personnage"
+                  : "le saint"}{" "}
+                en {guesses.length} essai
+                {guesses.length > 1 ? "s" : ""} !
+              </p>
+            </div>
+
+            <div className="space-y-4 text-emerald-700 dark:text-emerald-300">
+              <div className="border-b border-emerald-200 dark:border-emerald-700 pb-4">
+                <p className="font-semibold text-lg md:text-xl mb-2">
+                  {targetSaint?.name === "Judas Iscariote"
+                    ? targetSaint?.name
+                    : `Saint ${targetSaint?.name}`}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base">
+                  <p>Période : {targetSaint?.period}</p>
+                  <p>Fêté le : {targetSaint?.feastDay}</p>
+                  <p>Rôle : {targetSaint?.role}</p>
+                  <p>Origine : {targetSaint?.origin}</p>
+                  <p>Patronage : {targetSaint?.patronage}</p>
+                  <p>Attributs : {targetSaint?.attributes}</p>
+                </div>
+              </div>
+
+              <div className="text-sm md:text-base">
+                <h3 className="font-semibold text-base md:text-lg mb-2">
+                  Histoire et Héritage
+                </h3>
+                <p className="leading-relaxed">
+                  {targetSaint?.description || "Description non disponible."}
+                </p>
+              </div>
             </div>
           </div>
         )}

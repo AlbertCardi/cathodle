@@ -9,6 +9,7 @@ type Saint = {
   gender: string;
   feastDay: string;
   type: string;
+  description: string;
 };
 
 type SaintType =

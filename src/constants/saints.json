@@ -9,7 +9,8 @@
     "canonization": "Divin",
     "gender": "Homme",
     "feastDay": "25 décembre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Figure centrale du christianisme, Jésus-Christ est considéré comme le Fils de Dieu incarné. Né à Bethléem, il a vécu principalement en Galilée où il a enseigné pendant environ trois ans. Son ministère public a été marqué par des miracles, des enseignements profonds sur l'amour de Dieu et du prochain, et des paraboles mémorables. Il a été crucifié sous Ponce Pilate, est ressuscité le troisième jour selon les Écritures, événement fondateur de la foi chrétienne. Ses enseignements ont révolutionné la compréhension de la relation entre Dieu et l'humanité."
   },
   {
     "name": "Marie",
@@ -21,7 +22,8 @@
     "canonization": "Culte immémorial",
     "gender": "Femme",
     "feastDay": "15 août",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Marie, mère de Jésus, occupe une place unique dans la tradition chrétienne. Choisie par Dieu pour donner naissance au Sauveur, elle accepta sa mission avec humilité lors de l'Annonciation. Son 'Fiat' (qu'il me soit fait selon ta parole) est devenu symbole de foi et d'obéissance. Elle a accompagné Jésus tout au long de sa vie, jusqu'à sa crucifixion. L'Église catholique la vénère particulièrement et lui attribue plusieurs dogmes, dont l'Immaculée Conception et l'Assomption. Elle est considérée comme médiatrice de grâces et est invoquée sous de nombreux titres."
   },
   {
     "name": "Paul",
@@ -33,7 +35,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "29 juin",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "D'abord persécuteur des chrétiens sous le nom de Saul, il se convertit sur le chemin de Damas après une vision du Christ ressuscité. Devenu Paul, il entreprit plusieurs voyages missionnaires à travers l'Empire romain, fondant de nombreuses communautés chrétiennes. Ses lettres, qui constituent une partie importante du Nouveau Testament, ont profondément influencé la théologie chrétienne. Il développa particulièrement les concepts de justification par la foi et d'universalité du salut. Il mourut martyr à Rome sous Néron."
   },
   {
     "name": "Jean-Baptiste",
@@ -45,7 +48,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "24 juin",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Considéré comme le dernier des prophètes et le précurseur du Christ, Jean-Baptiste menait une vie ascétique dans le désert. Il baptisait dans le Jourdain en appelant à la conversion, et reconnut Jésus comme le Messie. Il dénonça publiquement l'union illégitime d'Hérode Antipas avec Hérodiade, ce qui lui valut d'être emprisonné puis décapité. Sa naissance et sa mort sont célébrées dans le calendrier liturgique, cas rare pour un saint."
   },
   {
     "name": "Joseph",
@@ -57,7 +61,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "19 mars",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Époux de Marie et père adoptif de Jésus, Joseph était un humble charpentier de Nazareth. Les évangiles le décrivent comme un 'homme juste' qui accepta avec foi son rôle dans le plan divin. Il protégea Marie et Jésus, notamment lors de la fuite en Égypte. Bien que silencieux dans les Écritures, son obéissance et sa fidélité en font un modèle de paternité et de foi. Il est le patron de l'Église universelle, des travailleurs et de la bonne mort."
   },
   {
     "name": "Marie-Madeleine",
@@ -69,187 +74,8 @@
     "canonization": "Culte immémorial",
     "gender": "Femme",
     "feastDay": "22 juillet",
-    "type": "Biblique"
-  },
-  {
-    "name": "Augustin",
-    "period": "4e siècle",
-    "origin": "Thagaste, Algérie",
-    "role": "Docteur de l'Église",
-    "patronage": "Théologiens",
-    "attributes": "Livre, Cœur enflammé",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "28 août",
-    "type": "Ancien"
-  },
-  {
-    "name": "Nicolas",
-    "period": "4e siècle",
-    "origin": "Myre, Turquie",
-    "role": "Évêque",
-    "patronage": "Enfants, Marins",
-    "attributes": "Trois bourses d'or, Mitre",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "6 décembre",
-    "type": "Ancien"
-  },
-  {
-    "name": "Martin de Tours",
-    "period": "4e siècle",
-    "origin": "Pannonie, Hongrie",
-    "role": "Évêque",
-    "patronage": "Soldats",
-    "attributes": "Manteau partagé, Épée",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "11 novembre",
-    "type": "Ancien"
-  },
-  {
-    "name": "Patrick",
-    "period": "5e siècle",
-    "origin": "Grande-Bretagne",
-    "role": "Missionnaire",
-    "patronage": "Irlande",
-    "attributes": "Trèfle, Serpents",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "17 mars",
-    "type": "Médiéval"
-  },
-  {
-    "name": "Thomas d'Aquin",
-    "period": "13e siècle",
-    "origin": "Roccasecca, Italie",
-    "role": "Docteur de l'Église",
-    "patronage": "Universités, Étudiants",
-    "attributes": "Soleil sur la poitrine, Colombe",
-    "canonization": "1323",
-    "gender": "Homme",
-    "feastDay": "28 janvier",
-    "type": "Médiéval"
-  },
-  {
-    "name": "François d'Assise",
-    "period": "13e siècle",
-    "origin": "Assise, Italie",
-    "role": "Fondateur d'ordre",
-    "patronage": "Animaux, Écologie",
-    "attributes": "Stigmates, Oiseaux",
-    "canonization": "1228",
-    "gender": "Homme",
-    "feastDay": "4 octobre",
-    "type": "Médiéval"
-  },
-  {
-    "name": "Antoine de Padoue",
-    "period": "13e siècle",
-    "origin": "Lisbonne, Portugal",
-    "role": "Prédicateur",
-    "patronage": "Objets perdus",
-    "attributes": "Lys, Enfant Jésus",
-    "canonization": "1232",
-    "gender": "Homme",
-    "feastDay": "13 juin",
-    "type": "Médiéval"
-  },
-  {
-    "name": "Catherine de Sienne",
-    "period": "14e siècle",
-    "origin": "Sienne, Italie",
-    "role": "Docteur de l'Église",
-    "patronage": "Italie, Europe",
-    "attributes": "Couronne d'épines, Stigmates",
-    "canonization": "1461",
-    "gender": "Femme",
-    "feastDay": "29 avril",
-    "type": "Médiéval"
-  },
-  {
-    "name": "Jeanne d'Arc",
-    "period": "15e siècle",
-    "origin": "Domrémy, France",
-    "role": "Guerrier",
-    "patronage": "France",
-    "attributes": "Armure, Étendard",
-    "canonization": "1920",
-    "gender": "Femme",
-    "feastDay": "30 mai",
-    "type": "Médiéval"
-  },
-  {
-    "name": "Vincent de Paul",
-    "period": "17e siècle",
-    "origin": "Pouy, France",
-    "role": "Fondateur d'ordre",
-    "patronage": "Œuvres de charité",
-    "attributes": "Enfants, Chaînes",
-    "canonization": "1737",
-    "gender": "Homme",
-    "feastDay": "27 septembre",
-    "type": "Moderne"
-  },
-  {
-    "name": "Thérèse de Lisieux",
-    "period": "19e siècle",
-    "origin": "Alençon, France",
-    "role": "Carmélite",
-    "patronage": "Missions",
-    "attributes": "Roses, Crucifix",
-    "canonization": "1925",
-    "gender": "Femme",
-    "feastDay": "1er octobre",
-    "type": "Moderne"
-  },
-  {
-    "name": "Bernadette",
-    "period": "19e siècle",
-    "origin": "Lourdes, France",
-    "role": "Voyant",
-    "patronage": "Malades",
-    "attributes": "Chapelet, Grotte",
-    "canonization": "1933",
-    "gender": "Femme",
-    "feastDay": "16 avril",
-    "type": "Moderne"
-  },
-  {
-    "name": "Padre Pio",
-    "period": "20e siècle",
-    "origin": "Pietrelcina, Italie",
-    "role": "Prêtre",
-    "patronage": "Malades",
-    "attributes": "Stigmates, Gants",
-    "canonization": "2002",
-    "gender": "Homme",
-    "feastDay": "23 septembre",
-    "type": "Contemporain"
-  },
-  {
-    "name": "Mère Teresa",
-    "period": "20e siècle",
-    "origin": "Skopje, Macédoine",
-    "role": "Missionnaire",
-    "patronage": "Pauvres",
-    "attributes": "Sari blanc et bleu, Chapelet",
-    "canonization": "2016",
-    "gender": "Femme",
-    "feastDay": "5 septembre",
-    "type": "Contemporain"
-  },
-  {
-    "name": "Jean-Paul II",
-    "period": "20e siècle",
-    "origin": "Wadowice, Pologne",
-    "role": "Pape",
-    "patronage": "Jeunesse",
-    "attributes": "Crosse papale, Chapelet",
-    "canonization": "2014",
-    "gender": "Homme",
-    "feastDay": "22 octobre",
-    "type": "Contemporain"
+    "type": "Biblique",
+    "description": "Figure majeure des évangiles, Marie-Madeleine fut libérée de sept démons par Jésus et devint l'une de ses plus fidèles disciples. Elle était présente à la crucifixion et fut la première témoin de la résurrection, ce qui lui valut le titre d''Apôtre des Apôtres'. Longtemps confondue avec d'autres figures bibliques, dont Marie de Béthanie et la pécheresse anonyme, elle symbolise la conversion et le pardon divin."
   },
   {
     "name": "Pierre",
@@ -261,7 +87,112 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "29 juin",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Simon, renommé Pierre par Jésus, était un pêcheur de Galilée qui devint le chef des apôtres. Malgré son reniement lors de la Passion, il fut confirmé dans son rôle de leader après la résurrection. Premier évêque de Rome, il établit l'Église dans la capitale impériale où il mourut martyr sous Néron, crucifié la tête en bas selon la tradition. Les clés qu'il porte symbolisent l'autorité que le Christ lui a confiée sur l'Église."
+  },
+  {
+    "name": "Augustin",
+    "period": "4e siècle",
+    "origin": "Thagaste, Algérie",
+    "role": "Docteur de l'Église",
+    "patronage": "Théologiens",
+    "attributes": "Livre, Cœur enflammé",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "28 août",
+    "type": "Ancien",
+    "description": "Après une jeunesse mouvementée et des années de recherche spirituelle, Augustin se convertit sous l'influence de sa mère Monique et d'Ambroise de Milan. Devenu évêque d'Hippone, il développa une théologie influente sur la grâce, le péché originel et la Trinité. Ses 'Confessions', première autobiographie spirituelle de l'histoire, et 'La Cité de Dieu' sont des œuvres majeures de la littérature chrétienne. Son influence sur la pensée occidentale perdure jusqu'à aujourd'hui."
+  },
+  {
+    "name": "Nicolas",
+    "period": "4e siècle",
+    "origin": "Myre, Turquie",
+    "role": "Évêque",
+    "patronage": "Enfants, Marins",
+    "attributes": "Trois bourses d'or, Mitre",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "6 décembre",
+    "type": "Ancien",
+    "description": "Évêque de Myre au IVe siècle, Nicolas est célèbre pour sa générosité. La légende la plus connue raconte comment il sauva trois jeunes filles de la prostitution en offrant secrètement des bourses d'or à leur père pour leur dot. Il aurait aussi ressuscité trois enfants et sauvé des marins de la tempête. Son culte s'est répandu dans toute l'Europe, et il est à l'origine du personnage du Père Noël dans plusieurs cultures."
+  },
+  {
+    "name": "François d'Assise",
+    "period": "13e siècle",
+    "origin": "Assise, Italie",
+    "role": "Fondateur d'ordre",
+    "patronage": "Animaux, Écologie",
+    "attributes": "Stigmates, Oiseaux",
+    "canonization": "1228",
+    "gender": "Homme",
+    "feastDay": "4 octobre",
+    "type": "Médiéval",
+    "description": "Né dans une famille riche de marchands, François renonça à sa fortune pour vivre dans la pauvreté absolue. Il fonda l'ordre des Frères mineurs (franciscains) prônant une vie simple et l'amour de la création. Premier saint à recevoir les stigmates, il est connu pour sa proximité avec la nature, illustrée par ses sermons aux oiseaux et l'histoire du loup de Gubbio. Son Cantique des créatures est considéré comme l'un des premiers poèmes en italien. Il est devenu le saint patron de l'écologie et des animaux."
+  },
+  {
+    "name": "Thomas d'Aquin",
+    "period": "13e siècle",
+    "origin": "Roccasecca, Italie",
+    "role": "Docteur de l'Église",
+    "patronage": "Universités, Étudiants",
+    "attributes": "Soleil sur la poitrine, Colombe",
+    "canonization": "1323",
+    "gender": "Homme",
+    "feastDay": "28 janvier",
+    "type": "Médiéval",
+    "description": "Plus grand théologien du Moyen Âge, Thomas d'Aquin réalisa une synthèse monumentale entre la philosophie aristotélicienne et la théologie chrétienne dans sa 'Somme théologique'. Dominicain brillant, il enseigna à Paris et en Italie. Sa pensée rationnelle et systématique influença profondément la théologie catholique. Il connut des expériences mystiques vers la fin de sa vie qui le conduisirent à considérer ses écrits comme 'de la paille' comparés à ce qu'il avait vu."
+  },
+  {
+    "name": "Jeanne d'Arc",
+    "period": "15e siècle",
+    "origin": "Domrémy, France",
+    "role": "Guerrier",
+    "patronage": "France",
+    "attributes": "Armure, Étendard",
+    "canonization": "1920",
+    "gender": "Femme",
+    "feastDay": "30 mai",
+    "type": "Médiéval",
+    "description": "Jeune paysanne guidée par des voix divines, Jeanne mena l'armée française à plusieurs victoires cruciales durant la guerre de Cent Ans, permettant le sacre de Charles VII à Reims. Capturée par les Bourguignons et livrée aux Anglais, elle fut condamnée pour hérésie et brûlée vive à Rouen à 19 ans. Son procès fut annulé en 1456, et elle devint un symbole de la France. Sa foi inébranlable face à ses juges et son courage exemplaire en ont fait une figure inspirante."
+  },
+  {
+    "name": "Thérèse de Lisieux",
+    "period": "19e siècle",
+    "origin": "Alençon, France",
+    "role": "Carmélite",
+    "patronage": "Missions",
+    "attributes": "Roses, Crucifix",
+    "canonization": "1925",
+    "gender": "Femme",
+    "feastDay": "1er octobre",
+    "type": "Moderne",
+    "description": "Entrée au Carmel à 15 ans, Thérèse développa une spiritualité connue comme la 'petite voie', basée sur la confiance en Dieu et l'accomplissement des petites choses avec grand amour. Son autobiographie 'Histoire d'une Âme' a touché des millions de lecteurs par sa simplicité et sa profondeur. Morte de tuberculose à 24 ans, elle promit de 'passer son ciel à faire du bien sur la terre'. Docteur de l'Église, elle est l'une des saintes les plus populaires des temps modernes."
+  },
+  {
+    "name": "Mère Teresa",
+    "period": "20e siècle",
+    "origin": "Skopje, Macédoine",
+    "role": "Missionnaire",
+    "patronage": "Pauvres",
+    "attributes": "Sari blanc et bleu, Chapelet",
+    "canonization": "2016",
+    "gender": "Femme",
+    "feastDay": "5 septembre",
+    "type": "Contemporain",
+    "description": "Religieuse albanaise, elle quitta son ordre enseignant pour servir les plus pauvres dans les bidonvilles de Calcutta. Elle fonda les Missionnaires de la Charité, qui s'occupent des mourants, des lépreux et des orphelins. Prix Nobel de la paix en 1979, elle devint un symbole mondial de la charité chrétienne. Ses écrits posthumes révélèrent une vie spirituelle marquée par la 'nuit obscure de l'âme', une longue période de doute et de désolation spirituelle, qu'elle vécut en continuant inlassablement son service auprès des plus démunis. Son travail a inspiré des milliers de personnes à travers le monde et ses sœurs poursuivent son œuvre dans plus de 130 pays. Elle a notamment défendu la dignité des plus pauvres parmi les pauvres, donnant une voix à ceux qui n'en avaient pas. Canonisée en 2016 par le Pape François, elle est devenue un symbole universel de compassion et de service désintéressé, transcendant les frontières religieuses et culturelles. Son exemple continue d'inspirer des actions caritatives et humanitaires dans le monde entier."
+  },
+  {
+    "name": "Jean-Paul II",
+    "period": "20e siècle",
+    "origin": "Wadowice, Pologne",
+    "role": "Pape",
+    "patronage": "Jeunesse",
+    "attributes": "Crosse papale, Chapelet",
+    "canonization": "2014",
+    "gender": "Homme",
+    "feastDay": "22 octobre",
+    "type": "Contemporain",
+    "description": "Premier pape polonais de l'histoire et l'un des plus longs pontificats (1978-2005), Jean-Paul II a profondément marqué l'Église et le monde. Survivant de la Seconde Guerre mondiale et acteur de la résistance au communisme, il a contribué à la chute du bloc soviétique. Son pontificat a été marqué par un engagement œcuménique fort, des voyages dans le monde entier, un dialogue avec les jeunes (JMJ) et une défense constante des droits humains. Il a également traversé avec courage une tentative d'assassinat en 1981 et une longue maladie à la fin de sa vie."
   },
   {
     "name": "André",
@@ -273,7 +204,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "30 novembre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Frère de Pierre et premier disciple appelé par Jésus, André était pêcheur avant de devenir 'pêcheur d'hommes'. Selon la tradition, il évangélisa la région de la mer Noire et la Grèce. Il mourut martyr à Patras sur une croix en forme de X (croix de Saint-André). Son culte s'est particulièrement développé en Écosse, dont il est le saint patron, et en Russie. Il est considéré comme un pont entre l'Église d'Orient et d'Occident."
   },
   {
     "name": "Jacques le Majeur",
@@ -285,7 +217,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "25 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Fils de Zébédée et frère de Jean l'Évangéliste, Jacques faisait partie du cercle le plus proche de Jésus. Premier apôtre martyrisé, il fut décapité à Jérusalem sous Hérode Agrippa. La tradition espagnole raconte que son corps fut miraculeusement transporté à Compostelle, devenant le centre d'un des plus importants pèlerinages de la chrétienté. Le 'Chemin de Saint-Jacques' continue d'attirer des milliers de pèlerins chaque année."
   },
   {
     "name": "Jean l'Évangéliste",
@@ -297,7 +230,99 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "27 décembre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Le 'disciple que Jésus aimait', Jean était le plus jeune des apôtres. Seul à ne pas avoir fui lors de la crucifixion, il reçut de Jésus la mission de prendre soin de Marie. Son évangile, profondément théologique, met l'accent sur la divinité du Christ. Il est aussi l'auteur présumé de l'Apocalypse, écrite durant son exil à Patmos. La tradition rapporte qu'il vécut jusqu'à un âge avancé à Éphèse, continuant d'enseigner l'amour fraternel."
+  },
+  {
+    "name": "Martin de Tours",
+    "period": "4e siècle",
+    "origin": "Pannonie, Hongrie",
+    "role": "Évêque",
+    "patronage": "Soldats",
+    "attributes": "Manteau partagé, Épée",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "11 novembre",
+    "type": "Ancien",
+    "description": "Soldat romain devenu moine puis évêque, Martin est célèbre pour avoir partagé son manteau avec un pauvre à Amiens. Après sa conversion, il fonda le premier monastère de Gaule à Ligugé. Devenu évêque de Tours malgré lui, il évangélisa les campagnes et s'opposa aux exécutions d'hérétiques. Son tombeau devint un lieu de pèlerinage majeur et son culte se répandit dans toute l'Europe. Il est considéré comme l'un des fondateurs du monachisme occidental."
+  },
+  {
+    "name": "Patrick",
+    "period": "5e siècle",
+    "origin": "Grande-Bretagne",
+    "role": "Missionnaire",
+    "patronage": "Irlande",
+    "attributes": "Trèfle, Serpents",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "17 mars",
+    "type": "Médiéval",
+    "description": "Enlevé jeune par des pirates irlandais, Patrick s'échappa après six ans de captivité, mais revint plus tard évangéliser l'Irlande. Il utilisa le trèfle pour expliquer la Trinité et établit de nombreuses églises et monastères. La légende raconte qu'il chassa tous les serpents d'Irlande. Ses écrits, notamment sa 'Confession', révèlent un homme humble et dévoué. Son influence fut si profonde que l'Irlande devint connue comme 'l'île des saints et des savants'."
+  },
+  {
+    "name": "Antoine de Padoue",
+    "period": "13e siècle",
+    "origin": "Lisbonne, Portugal",
+    "role": "Prédicateur",
+    "patronage": "Objets perdus",
+    "attributes": "Lys, Enfant Jésus",
+    "canonization": "1232",
+    "gender": "Homme",
+    "feastDay": "13 juin",
+    "type": "Médiéval",
+    "description": "D'abord chanoine régulier au Portugal, il rejoignit les franciscains inspiré par le martyre de missionnaires au Maroc. Prédicateur talentueux, il combattit les hérésies par son enseignement clair de la doctrine. De nombreux miracles lui sont attribués, et il fut canonisé moins d'un an après sa mort. Son patronage des objets perdus vient d'un incident où un novice lui vola son psautier et le rendit après une apparition effrayante."
+  },
+  {
+    "name": "Catherine de Sienne",
+    "period": "14e siècle",
+    "origin": "Sienne, Italie",
+    "role": "Docteur de l'Église",
+    "patronage": "Italie, Europe",
+    "attributes": "Couronne d'épines, Stigmates",
+    "canonization": "1461",
+    "gender": "Femme",
+    "feastDay": "29 avril",
+    "type": "Médiéval",
+    "description": "Mystique et conseillère politique influente, Catherine joua un rôle crucial dans le retour des papes d'Avignon à Rome. Tertiaire dominicaine, elle vécut une vie intense de prière et de service aux pauvres et aux malades. Ses lettres et son 'Dialogue' témoignent d'une profonde sagesse spirituelle. Elle reçut les stigmates invisibles et mourut à 33 ans, épuisée par ses efforts pour l'unité de l'Église. Elle fut la première femme, avec Thérèse d'Avila, à être déclarée Docteur de l'Église."
+  },
+  {
+    "name": "Vincent de Paul",
+    "period": "17e siècle",
+    "origin": "Pouy, France",
+    "role": "Fondateur d'ordre",
+    "patronage": "Œuvres de charité",
+    "attributes": "Enfants, Chaînes",
+    "canonization": "1737",
+    "gender": "Homme",
+    "feastDay": "27 septembre",
+    "type": "Moderne",
+    "description": "Figure majeure de la réforme catholique en France, Vincent révolutionna le service des pauvres et la formation du clergé. Avec Louise de Marillac, il fonda les Filles de la Charité, première congrégation féminine de vie active. Il organisa des secours pendant la Fronde, créa des hôpitaux et des orphelinats, et s'occupa des galériens. Son influence sur la charité chrétienne perdure à travers les nombreuses organisations qui portent son nom."
+  },
+  {
+    "name": "Bernadette",
+    "period": "19e siècle",
+    "origin": "Lourdes, France",
+    "role": "Voyant",
+    "patronage": "Malades",
+    "attributes": "Chapelet, Grotte",
+    "canonization": "1933",
+    "gender": "Femme",
+    "feastDay": "16 avril",
+    "type": "Moderne",
+    "description": "Issue d'une famille pauvre, Bernadette Soubirous eut 18 apparitions de la Vierge Marie à la grotte de Massabielle en 1858. Malgré le scepticisme initial, sa sincérité et sa persévérance conduisirent à la reconnaissance des apparitions. Elle entra chez les sœurs de Nevers où elle vécut humblement, supportant avec patience une maladie douloureuse. Lourdes est devenu un des plus grands centres de pèlerinage au monde, particulièrement pour les malades."
+  },
+  {
+    "name": "Padre Pio",
+    "period": "20e siècle",
+    "origin": "Pietrelcina, Italie",
+    "role": "Prêtre",
+    "patronage": "Malades",
+    "attributes": "Stigmates, Gants",
+    "canonization": "2002",
+    "gender": "Homme",
+    "feastDay": "23 septembre",
+    "type": "Contemporain",
+    "description": "Capucin italien qui porta les stigmates pendant 50 ans, Padre Pio était connu pour ses dons spirituels, notamment la bilocation et la lecture des cœurs. Son ministère de confession attirait des foules immenses à San Giovanni Rotondo. Il fonda un hôpital moderne, la 'Maison du Soulagement de la Souffrance'. Malgré des controverses et des restrictions ecclésiastiques, sa réputation de sainteté ne cessa de croître. Sa canonisation en 2002 attira plus d'un million de pèlerins à Rome."
   },
   {
     "name": "Philippe",
@@ -309,7 +334,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "3 mai",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "L'un des premiers disciples appelés par Jésus, Philippe se distingue dans l'Évangile par son dialogue avec le Christ lors de la multiplication des pains et sa demande de voir le Père. Selon la tradition, il évangélisa la Phrygie avec Barthélemy et mourut martyr à Hiérapolis. Il est souvent représenté avec des pains, rappelant son rôle dans le miracle de la multiplication, et une croix, symbole de son martyre. Son esprit pratique et sa foi sincère en font un modèle de disciple cherchant à comprendre les mystères divins."
   },
   {
     "name": "Barthélemy",
@@ -321,7 +347,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "24 août",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Identifié comme Nathanaël dans l'Évangile de Jean, Barthélemy fut présenté à Jésus par Philippe. Le Christ le décrivit comme 'un véritable Israélite en qui il n'y a pas de ruse'. Selon la tradition, il prêcha en Inde et en Arménie, où il fut martyrisé en étant écorché vif puis crucifié. Son culte s'est particulièrement développé au Moyen Âge, et ses reliques sont vénérées à Rome dans l'église Saint-Barthélemy-en-l'Île. Sa mort atroce en a fait le patron des métiers travaillant le cuir."
   },
   {
     "name": "Thomas",
@@ -333,7 +360,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "3 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Connu pour son doute face à la résurrection du Christ, Thomas incarne paradoxalement une profonde profession de foi en proclamant 'Mon Seigneur et mon Dieu' devant le Ressuscité. La tradition le présente comme l'évangélisateur de l'Inde, où il aurait construit plusieurs églises avant son martyre à Chennai. Les chrétiens de Saint Thomas en Inde font remonter leur origine à sa mission. Son scepticisme initial, transformé en foi ardente, en fait un saint particulièrement proche des chercheurs de vérité."
   },
   {
     "name": "Matthieu",
@@ -345,7 +373,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "21 septembre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Ancien collecteur d'impôts nommé Lévi, Matthieu quitta sa profession lucrative pour suivre Jésus. Son évangile, écrit pour une communauté judéo-chrétienne, souligne particulièrement l'accomplissement des prophéties de l'Ancien Testament en Jésus. La tradition rapporte qu'il prêcha en Éthiopie où il subit le martyre. Sa conversion spectaculaire d'une vie centrée sur l'argent à une vie de disciple en fait un modèle de transformation spirituelle. Son symbole est l'homme ailé car son évangile commence par la généalogie humaine du Christ."
   },
   {
     "name": "Jacques le Mineur",
@@ -357,7 +386,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "3 mai",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Appelé 'frère du Seigneur' dans les Écritures, Jacques devint le premier évêque de Jérusalem et joua un rôle crucial dans l'ouverture de l'Église aux païens. Sa lettre dans le Nouveau Testament insiste sur l'importance des œuvres comme expression de la foi. Connu pour son ascétisme et sa justice, il fut martyrisé en étant précipité du pinacle du Temple puis achevé à coups de bâton de foulon. Son autorité morale et sa sagesse en firent une figure respectée tant par les chrétiens que par les non-chrétiens de Jérusalem."
   },
   {
     "name": "Jude Thaddée",
@@ -369,7 +399,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "28 octobre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Distinct de Judas l'Iscariote, Jude est l'auteur d'une courte épître du Nouveau Testament mettant en garde contre les faux docteurs. Son surnom Thaddée signifie 'courageux'. La tradition rapporte qu'il évangélisa la Mésopotamie avec Simon le Zélote. Il est devenu le saint patron des causes désespérées, peut-être parce que les fidèles, évitant de prier 'Judas' à cause de l'Iscariote, ne s'adressaient à lui qu'en dernier recours. De nombreux témoignages attestent de son intercession efficace dans les situations difficiles."
   },
   {
     "name": "Simon le Zélote",
@@ -381,19 +412,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "28 octobre",
-    "type": "Biblique"
-  },
-  {
-    "name": "Judas Iscariote",
-    "period": "1er siècle",
-    "origin": "Kérioth, Palestine",
-    "role": "Apôtre",
-    "patronage": "Aucun",
-    "attributes": "Bourse, Corde",
-    "canonization": "Non canonisé",
-    "gender": "Homme",
-    "feastDay": "Aucun",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Surnommé 'le Zélote', probablement en raison de son appartenance au parti des zélotes opposés à l'occupation romaine avant sa rencontre avec Jésus. Sa transformation d'un militant politique en apôtre du Christ illustre la puissance transformatrice de l'Évangile. Selon diverses traditions, il aurait prêché en Égypte, en Perse et jusqu'en Grande-Bretagne. Il aurait été martyrisé par la scie, d'où son attribut. Son parcours témoigne de la façon dont la foi peut réorienter le zèle politique vers un engagement spirituel."
   },
   {
     "name": "Matthias",
@@ -405,7 +425,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "14 mai",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Choisi par tirage au sort pour remplacer Judas Iscariote, Matthias avait suivi Jésus depuis le baptême de Jean jusqu'à l'Ascension. Sa sélection, décrite dans les Actes des Apôtres, illustre l'importance de maintenir le nombre symbolique de douze apôtres. Selon la tradition, il évangélisa la Cappadoce et les régions bordant la mer Caspienne. Il aurait été martyrisé par la hache ou lapidé. Son histoire rappelle que Dieu peut appeler à des responsabilités importantes même ceux qui sont restés dans l'ombre."
   },
   {
     "name": "Abraham",
@@ -417,7 +438,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "9 octobre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Père des croyants des trois religions monothéistes, Abraham quitta sa patrie sur l'appel de Dieu pour une terre inconnue. Sa foi fut mise à l'épreuve lorsqu'il reçut l'ordre de sacrifier son fils Isaac, mais Dieu l'arrêta au dernier moment. Son hospitalité envers trois visiteurs mystérieux (interprétés comme une manifestation divine) est devenue légendaire. L'alliance que Dieu fit avec lui et sa descendance est fondamentale dans l'histoire du salut. Sa vie illustre la confiance absolue en Dieu et l'obéissance de la foi."
   },
   {
     "name": "Moïse",
@@ -429,7 +451,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "4 septembre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Libérateur du peuple hébreu de l'esclavage en Égypte, Moïse reçut de Dieu les Dix Commandements sur le mont Sinaï. Figure centrale de l'Ancien Testament, il conduisit le peuple pendant quarante ans dans le désert, établissant l'alliance entre Dieu et Israël. Son humilité, malgré son rôle exceptionnel, est soulignée dans les textes bibliques. Il mourut en vue de la Terre Promise sans y entrer. Sa vie illustre le leadership spirituel et la fidélité à la mission divine malgré les obstacles."
   },
   {
     "name": "David",
@@ -441,7 +464,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "29 décembre",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Berger devenu roi d'Israël, David est célèbre pour sa victoire sur Goliath et son talent de musicien-poète. Auteur présumé de nombreux psaumes, il établit Jérusalem comme capitale et y fit transporter l'Arche d'Alliance. Malgré ses péchés (notamment l'affaire Bethsabée), son repentir sincère et sa relation profonde avec Dieu en font un modèle de conversion. La promesse divine d'une dynastie éternelle trouve son accomplissement en Jésus, 'fils de David'. Son règne est considéré comme l'âge d'or d'Israël."
   },
   {
     "name": "Élie",
@@ -453,7 +477,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "20 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Grand prophète d'Israël, Élie défendit le monothéisme contre le culte de Baal. Son duel avec les prophètes de Baal sur le Mont Carmel est resté célèbre. Nourri miraculeusement par des corbeaux, il ressuscita le fils d'une veuve et fut enlevé au ciel dans un char de feu. Il apparaît avec Moïse lors de la Transfiguration du Christ. Sa vie de solitude, de prière et de combat spirituel a inspiré l'ordre des Carmes. Il est attendu pour revenir avant le jour du Seigneur."
   },
   {
     "name": "Isaïe",
@@ -465,7 +490,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "9 mai",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "L'un des plus grands prophètes de l'Ancien Testament, Isaïe reçut sa vocation dans une vision grandiose du Seigneur au Temple. Ses prophéties sur le Messie souffrant (le 'Serviteur de Yahvé') sont particulièrement importantes pour la tradition chrétienne. Son livre contient des textes majeurs sur l'espérance messianique et la justice sociale. Selon la tradition, il fut martyrisé en étant scié en deux sous le roi Manassé. Son éloquence et la beauté de ses textes lui ont valu d'être appelé le 'Shakespeare des prophètes'."
   },
   {
     "name": "Jérémie",
@@ -477,7 +503,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "1er mai",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Prophète de malheur malgré lui, Jérémie annonça la destruction de Jérusalem et l'exil à Babylone. Persécuté pour ses oracles, emprisonné et jeté dans une citerne, il resta fidèle à sa mission. Ses 'Confessions' révèlent ses luttes intérieures et sa souffrance d'être rejeté par son peuple. Il prêcha la conversion intérieure et annonça une nouvelle alliance inscrite dans les cœurs. Témoin de la chute de Jérusalem, il termina sa vie en Égypte avec les réfugiés judéens."
   },
   {
     "name": "Daniel",
@@ -489,19 +516,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "21 juillet",
-    "type": "Biblique"
-  },
-  {
-    "name": "Jean le Baptiste",
-    "period": "1er siècle",
-    "origin": "Judée, Palestine",
-    "role": "Prophète, Précurseur",
-    "patronage": "Baptême, Conversion",
-    "attributes": "Agneau, Bâton crucifère",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "24 juin",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Déporté à Babylone, Daniel se distingua par sa sagesse et son don d'interpréter les songes. Il resta fidèle à sa foi malgré les pressions de la cour babylonienne. Jeté dans la fosse aux lions pour avoir prié Dieu contre l'édit royal, il fut miraculeusement préservé. Ses visions apocalyptiques ont profondément influencé la littérature juive et chrétienne. Son livre mêle récits édifiants et prophéties sur la succession des empires et la venue du Royaume de Dieu."
   },
   {
     "name": "Anne",
@@ -513,7 +529,8 @@
     "canonization": "Culte immémorial",
     "gender": "Femme",
     "feastDay": "26 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Mère de la Vierge Marie, Anne est absente des évangiles canoniques mais sa vie est décrite dans les évangiles apocryphes. Selon la tradition, elle et son époux Joachim étaient stériles et âgés quand Dieu leur accorda miraculeusement une fille, Marie. Son culte s'est développé à partir du VIe siècle, particulièrement en Orient. Elle est souvent représentée enseignant à lire à Marie, ce qui en fait la patronne des éducateurs. Son exemple inspire les grands-parents dans leur rôle de transmission de la foi."
   },
   {
     "name": "Joachim",
@@ -525,7 +542,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "26 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Époux d'Anne et père de la Vierge Marie, Joachim n'est connu que par la tradition et les évangiles apocryphes. Homme juste et pieux, il souffrait de ne pas avoir d'enfant, ce qui était considéré comme une malédiction à l'époque. Après une période de jeûne et de prière dans le désert, il reçut l'annonce de la naissance miraculeuse de Marie. Son histoire souligne l'importance de la persévérance dans la prière et la confiance en Dieu malgré les épreuves."
   },
   {
     "name": "Marthe",
@@ -537,7 +555,8 @@
     "canonization": "Culte immémorial",
     "gender": "Femme",
     "feastDay": "29 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Sœur de Marie et de Lazare, Marthe accueillait souvent Jésus dans sa maison de Béthanie. L'épisode où Jésus lui rappelle que 'Marie a choisi la meilleure part' est devenu symbole de l'équilibre entre action et contemplation. Sa profession de foi lors de la résurrection de Lazare est l'une des plus belles du Nouveau Testament. Selon la tradition provençale, elle aurait évangélisé la région de Tarascon où elle aurait maîtrisé un dragon local, la Tarasque."
   },
   {
     "name": "Lazare",
@@ -549,7 +568,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "29 juillet",
-    "type": "Biblique"
+    "type": "Biblique",
+    "description": "Frère de Marthe et Marie, Lazare est célèbre pour avoir été ressuscité par Jésus après quatre jours au tombeau, dernier et plus grand miracle avant la Passion. Cet événement provoqua la décision des autorités juives de faire mourir Jésus. Selon la tradition provençale, il devint le premier évêque de Marseille après avoir fui la persécution en Palestine. Sa résurrection est vue comme un signe de la puissance du Christ sur la mort et une préfiguration de la résurrection finale."
   },
   {
     "name": "Georges",
@@ -561,7 +581,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "23 avril",
-    "type": "Ancien"
+    "type": "Ancien",
+    "description": "Officier romain martyrisé sous Dioclétien, Georges est devenu l'un des saints les plus populaires de la chrétienté. La légende du dragon qu'il aurait vaincu pour sauver une princesse symbolise la victoire de la foi sur le mal. Son culte s'est particulièrement développé pendant les croisades, et il est devenu le saint patron de nombreux pays et régions, notamment l'Angleterre. Son courage face au martyre et sa défense des opprimés en ont fait un modèle de chevalerie chrétienne."
   },
   {
     "name": "Cécile",
@@ -573,7 +594,8 @@
     "canonization": "Culte immémorial",
     "gender": "Femme",
     "feastDay": "22 novembre",
-    "type": "Ancien"
+    "type": "Ancien",
+    "description": "Jeune patricienne romaine, Cécile fut mariée contre son gré mais convertit son époux Valérien au christianisme. Condamnée à mort pour sa foi, elle survécut miraculeusement à plusieurs tentatives d'exécution avant de succomber. La tradition rapporte qu'elle 'chantait dans son cœur' pendant son martyre, ce qui en a fait la patronne des musiciens. Son corps intact fut découvert au XVIe siècle dans les catacombes de Rome. De nombreuses compositions musicales lui sont dédiées."
   },
   {
     "name": "Christophe",
@@ -585,7 +607,164 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "25 juillet",
-    "type": "Ancien"
+    "type": "Ancien",
+    "description": "Selon la légende, Christophe était un géant qui cherchait à servir le plus puissant des maîtres. Il devint passeur sur une rivière et un jour porta un enfant qui s'avéra être le Christ, d'où son nom signifiant 'porte-Christ'. Le poids de l'enfant, aussi lourd que le monde dont il est le Sauveur, fait comprendre à Christophe qu'il sert désormais le Roi des rois. Bien que son historicité soit incertaine, son culte s'est largement répandu, notamment comme protecteur des voyageurs."
+  },
+  {
+    "name": "David",
+    "period": "10e siècle av. J.-C.",
+    "origin": "Bethléem, Palestine",
+    "role": "Roi, Prophète",
+    "patronage": "Musiciens, Poètes",
+    "attributes": "Harpe, Couronne",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "29 décembre",
+    "type": "Biblique",
+    "description": "Berger devenu roi d'Israël, David est célèbre pour sa victoire sur Goliath et son talent de musicien-poète. Auteur présumé de nombreux psaumes, il établit Jérusalem comme capitale et y fit transporter l'Arche d'Alliance. Malgré ses péchés (notamment l'affaire Bethsabée), son repentir sincère et sa relation profonde avec Dieu en font un modèle de conversion. La promesse divine d'une dynastie éternelle trouve son accomplissement en Jésus, 'fils de David'. Son règne est considéré comme l'âge d'or d'Israël."
+  },
+  {
+    "name": "Élie",
+    "period": "9e siècle av. J.-C.",
+    "origin": "Tishbé, Palestine",
+    "role": "Prophète",
+    "patronage": "Carmel",
+    "attributes": "Char de feu, Corbeau",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "20 juillet",
+    "type": "Biblique",
+    "description": "Grand prophète d'Israël, Élie défendit le monothéisme contre le culte de Baal. Son duel avec les prophètes de Baal sur le Mont Carmel est resté célèbre. Nourri miraculeusement par des corbeaux, il ressuscita le fils d'une veuve et fut enlevé au ciel dans un char de feu. Il apparaît avec Moïse lors de la Transfiguration du Christ. Sa vie de solitude, de prière et de combat spirituel a inspiré l'ordre des Carmes. Il est attendu pour revenir avant le jour du Seigneur."
+  },
+  {
+    "name": "Isaïe",
+    "period": "8e siècle av. J.-C.",
+    "origin": "Jérusalem, Palestine",
+    "role": "Prophète",
+    "patronage": "Prophètes",
+    "attributes": "Rouleau, Scie",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "9 mai",
+    "type": "Biblique",
+    "description": "L'un des plus grands prophètes de l'Ancien Testament, Isaïe reçut sa vocation dans une vision grandiose du Seigneur au Temple. Ses prophéties sur le Messie souffrant (le 'Serviteur de Yahvé') sont particulièrement importantes pour la tradition chrétienne. Son livre contient des textes majeurs sur l'espérance messianique et la justice sociale. Selon la tradition, il fut martyrisé en étant scié en deux sous le roi Manassé. Son éloquence et la beauté de ses textes lui ont valu d'être appelé le 'Shakespeare des prophètes'."
+  },
+  {
+    "name": "Jérémie",
+    "period": "7e-6e siècle av. J.-C.",
+    "origin": "Anathoth, Palestine",
+    "role": "Prophète",
+    "patronage": "Prédicateurs",
+    "attributes": "Chaînes, Rouleau",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "1er mai",
+    "type": "Biblique",
+    "description": "Prophète de malheur malgré lui, Jérémie annonça la destruction de Jérusalem et l'exil à Babylone. Persécuté pour ses oracles, emprisonné et jeté dans une citerne, il resta fidèle à sa mission. Ses 'Confessions' révèlent ses luttes intérieures et sa souffrance d'être rejeté par son peuple. Il prêcha la conversion intérieure et annonça une nouvelle alliance inscrite dans les cœurs. Témoin de la chute de Jérusalem, il termina sa vie en Égypte avec les réfugiés judéens."
+  },
+  {
+    "name": "Daniel",
+    "period": "6e siècle av. J.-C.",
+    "origin": "Jérusalem, Palestine",
+    "role": "Prophète",
+    "patronage": "Sagesse",
+    "attributes": "Lions, Fosse",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "21 juillet",
+    "type": "Biblique",
+    "description": "Déporté à Babylone, Daniel se distingua par sa sagesse et son don d'interpréter les songes. Il resta fidèle à sa foi malgré les pressions de la cour babylonienne. Jeté dans la fosse aux lions pour avoir prié Dieu contre l'édit royal, il fut miraculeusement préservé. Ses visions apocalyptiques ont profondément influencé la littérature juive et chrétienne. Son livre mêle récits édifiants et prophéties sur la succession des empires et la venue du Royaume de Dieu."
+  },
+  {
+    "name": "Anne",
+    "period": "1er siècle av. J.-C.",
+    "origin": "Bethléem, Palestine",
+    "role": "Parent de Marie",
+    "patronage": "Grand-mères, Ménagères",
+    "attributes": "Livre, Manteau",
+    "canonization": "Culte immémorial",
+    "gender": "Femme",
+    "feastDay": "26 juillet",
+    "type": "Biblique",
+    "description": "Mère de la Vierge Marie, Anne est absente des évangiles canoniques mais sa vie est décrite dans les évangiles apocryphes. Selon la tradition, elle et son époux Joachim étaient stériles et âgés quand Dieu leur accorda miraculeusement une fille, Marie. Son culte s'est développé à partir du VIe siècle, particulièrement en Orient. Elle est souvent représentée enseignant à lire à Marie, ce qui en fait la patronne des éducateurs. Son exemple inspire les grands-parents dans leur rôle de transmission de la foi."
+  },
+  {
+    "name": "Joachim",
+    "period": "1er siècle av. J.-C.",
+    "origin": "Nazareth, Palestine",
+    "role": "Parent de Marie",
+    "patronage": "Grands-pères, Pères",
+    "attributes": "Bâton, Colombes",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "26 juillet",
+    "type": "Biblique",
+    "description": "Époux d'Anne et père de la Vierge Marie, Joachim n'est connu que par la tradition et les évangiles apocryphes. Homme juste et pieux, il souffrait de ne pas avoir d'enfant, ce qui était considéré comme une malédiction à l'époque. Après une période de jeûne et de prière dans le désert, il reçut l'annonce de la naissance miraculeuse de Marie. Son histoire souligne l'importance de la persévérance dans la prière et la confiance en Dieu malgré les épreuves."
+  },
+  {
+    "name": "Marthe",
+    "period": "1er siècle",
+    "origin": "Béthanie, Palestine",
+    "role": "Hôte du Christ",
+    "patronage": "Cuisiniers, Hôteliers",
+    "attributes": "Goupillon, Dragon",
+    "canonization": "Culte immémorial",
+    "gender": "Femme",
+    "feastDay": "29 juillet",
+    "type": "Biblique",
+    "description": "Sœur de Marie et de Lazare, Marthe accueillait souvent Jésus dans sa maison de Béthanie. L'épisode où Jésus lui rappelle que 'Marie a choisi la meilleure part' est devenu symbole de l'équilibre entre action et contemplation. Sa profession de foi lors de la résurrection de Lazare est l'une des plus belles du Nouveau Testament. Selon la tradition provençale, elle aurait évangélisé la région de Tarascon où elle aurait maîtrisé un dragon local, la Tarasque."
+  },
+  {
+    "name": "Lazare",
+    "period": "1er siècle",
+    "origin": "Béthanie, Palestine",
+    "role": "Ami du Christ",
+    "patronage": "Fossoyeurs",
+    "attributes": "Tombeau, Suaire",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "29 juillet",
+    "type": "Biblique",
+    "description": "Frère de Marthe et Marie, Lazare est célèbre pour avoir été ressuscité par Jésus après quatre jours au tombeau, dernier et plus grand miracle avant la Passion. Cet événement provoqua la décision des autorités juives de faire mourir Jésus. Selon la tradition provençale, il devint le premier évêque de Marseille après avoir fui la persécution en Palestine. Sa résurrection est vue comme un signe de la puissance du Christ sur la mort et une préfiguration de la résurrection finale."
+  },
+  {
+    "name": "Georges",
+    "period": "3e siècle",
+    "origin": "Cappadoce, Turquie",
+    "role": "Martyr",
+    "patronage": "Chevaliers, Angleterre",
+    "attributes": "Dragon, Lance, Armure",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "23 avril",
+    "type": "Ancien",
+    "description": "Officier romain martyrisé sous Dioclétien, Georges est devenu l'un des saints les plus populaires de la chrétienté. La légende du dragon qu'il aurait vaincu pour sauver une princesse symbolise la victoire de la foi sur le mal. Son culte s'est particulièrement développé pendant les croisades, et il est devenu le saint patron de nombreux pays et régions, notamment l'Angleterre. Son courage face au martyre et sa défense des opprimés en ont fait un modèle de chevalerie chrétienne."
+  },
+  {
+    "name": "Cécile",
+    "period": "3e siècle",
+    "origin": "Rome, Italie",
+    "role": "Martyr",
+    "patronage": "Musique, Musiciens",
+    "attributes": "Orgue, Harpe, Lys",
+    "canonization": "Culte immémorial",
+    "gender": "Femme",
+    "feastDay": "22 novembre",
+    "type": "Ancien",
+    "description": "Jeune patricienne romaine, Cécile fut mariée contre son gré mais convertit son époux Valérien au christianisme. Condamnée à mort pour sa foi, elle survécut miraculeusement à plusieurs tentatives d'exécution avant de succomber. La tradition rapporte qu'elle 'chantait dans son cœur' pendant son martyre, ce qui en a fait la patronne des musiciens. Son corps intact fut découvert au XVIe siècle dans les catacombes de Rome. De nombreuses compositions musicales lui sont dédiées."
+  },
+  {
+    "name": "Christophe",
+    "period": "3e siècle",
+    "origin": "Canaan",
+    "role": "Martyr",
+    "patronage": "Voyageurs, Automobilistes",
+    "attributes": "Enfant Jésus sur l'épaule, Bâton",
+    "canonization": "Culte immémorial",
+    "gender": "Homme",
+    "feastDay": "25 juillet",
+    "type": "Ancien",
+    "description": "Selon la légende, Christophe était un géant qui cherchait à servir le plus puissant des maîtres. Il devint passeur sur une rivière et un jour porta un enfant qui s'avéra être le Christ, d'où son nom signifiant 'porte-Christ'. Le poids de l'enfant, aussi lourd que le monde dont il est le Sauveur, fait comprendre à Christophe qu'il sert désormais le Roi des rois. Bien que son historicité soit incertaine, son culte s'est largement répandu, notamment comme protecteur des voyageurs."
   },
   {
     "name": "Benoît",
@@ -597,7 +776,8 @@
     "canonization": "Culte immémorial",
     "gender": "Homme",
     "feastDay": "11 juillet",
-    "type": "Médiéval"
+    "type": "Médiéval",
+    "description": "Fondateur du monachisme occidental, Benoît rédigea une Règle équilibrée combinant prière et travail ('Ora et Labora'). Après avoir vécu en ermite à Subiaco, il fonda le monastère du Mont-Cassin qui devint un modèle pour des milliers d'autres. Sa Règle, caractérisée par la modération et la sagesse pratique, a structuré la vie monastique pendant des siècles. Les monastères bénédictins ont joué un rôle crucial dans la préservation de la culture antique et le développement de l'Europe médiévale. Benoît est considéré comme un des pères de la civilisation européenne."
   },
   {
     "name": "Claire",
@@ -609,7 +789,8 @@
     "canonization": "1255",
     "gender": "Femme",
     "feastDay": "11 août",
-    "type": "Médiéval"
+    "type": "Médiéval",
+    "description": "Première disciple féminine de François d'Assise, Claire fonda l'ordre des Clarisses, vivant dans une pauvreté radicale. Issue d'une famille noble, elle s'enfuit de chez elle à 18 ans pour suivre l'idéal franciscain. Elle dirigea le monastère de San Damiano pendant 40 ans, défendant le 'privilège de la pauvreté' contre les tentatives d'adoucissement. Un jour, alitée, elle vit et entendit l'office de Noël projeté sur le mur de sa cellule, ce qui en fait la patronne de la télévision. Sa vie contemplative et son amitié spirituelle avec François sont exemplaires."
   },
   {
     "name": "Dominique",
@@ -621,7 +802,8 @@
     "canonization": "1234",
     "gender": "Homme",
     "feastDay": "8 août",
-    "type": "Médiéval"
+    "type": "Médiéval",
+    "description": "Fondateur de l'Ordre des Prêcheurs (Dominicains), Dominique combina l'étude approfondie avec la prédication pour contrer les hérésies de son temps. Il insista sur la formation intellectuelle de ses frères, envoyant beaucoup d'entre eux étudier dans les universités naissantes. La tradition raconte que sa mère, enceinte, rêva d'un chien portant une torche enflammée, symbole de la lumière de la vérité que ses fils répandraient dans le monde. Il popularisa la récitation du Rosaire, qu'il aurait reçu de la Vierge Marie."
   },
   {
     "name": "Rita",
@@ -633,7 +815,8 @@
     "canonization": "1900",
     "gender": "Femme",
     "feastDay": "22 mai",
-    "type": "Médiéval"
+    "type": "Médiéval",
+    "description": "Mariée contre son gré à un homme violent, Rita supporta patiemment cette situation pendant 18 ans jusqu'à l'assassinat de son mari. Elle pardonna aux meurtriers et pria pour que ses fils ne cherchent pas vengeance. Après leur mort prématurée, elle devint augustine à Cascia malgré l'opposition initiale du monastère. Elle reçut une épine de la couronne du Christ sur son front et son corps resta intact après sa mort. Sa vie difficile et sa patience dans les épreuves en ont fait la patronne des causes désespérées."
   },
   {
     "name": "François Xavier",
@@ -645,7 +828,8 @@
     "canonization": "1622",
     "gender": "Homme",
     "feastDay": "3 décembre",
-    "type": "Moderne"
+    "type": "Moderne",
+    "description": "Un des premiers compagnons d'Ignace de Loyola et cofondateur des Jésuites, François Xavier fut le plus grand missionnaire des temps modernes. Il évangélisa l'Inde, l'Indonésie et le Japon, baptisant des milliers de personnes. Son respect des cultures locales et son adaptation aux coutumes asiatiques ont marqué l'histoire des missions. Il mourut en vue de la Chine qu'il rêvait d'évangéliser. Son corps incorrupt est vénéré à Goa. Son zèle missionnaire et son courage face aux difficultés en font un modèle d'évangélisation."
   },
   {
     "name": "Don Bosco",
@@ -657,7 +841,8 @@
     "canonization": "1934",
     "gender": "Homme",
     "feastDay": "31 janvier",
-    "type": "Moderne"
+    "type": "Moderne",
+    "description": "Prêtre turinois qui consacra sa vie à l'éducation des jeunes défavorisés pendant la révolution industrielle. Il développa une méthode éducative basée sur 'la raison, la religion et l'affection', créant des écoles professionnelles et des centres de jeunesse. Fondateur des Salésiens et des Filles de Marie-Auxiliatrice, il fut aussi un écrivain prolifique et un bâtisseur infatigable. Ses rêves prophétiques guidèrent son action. Son système préventif d'éducation continue d'inspirer de nombreux éducateurs."
   },
   {
     "name": "Maximilien Kolbe",
@@ -669,6 +854,7 @@
     "canonization": "1982",
     "gender": "Homme",
     "feastDay": "14 août",
-    "type": "Contemporain"
+    "type": "Contemporain",
+    "description": "Franciscain polonais qui développa un important apostolat marial et médiatique avant la Seconde Guerre mondiale. Arrêté par les nazis, il s'offrit volontairement pour mourir à la place d'un père de famille dans le camp d'Auschwitz. Il accompagna ses compagnons de bunker de la faim par la prière et le chant jusqu'à sa mort par injection de phénol. Son sacrifice héroïque illustre la victoire de l'amour sur la haine. Il est le patron des temps difficiles et des médias en raison de son travail d'évangélisation par la presse."
   }
 ]
