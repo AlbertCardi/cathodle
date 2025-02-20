@@ -10,23 +10,42 @@ import VersetsInstructions from "@/components/VersetsInstructions";
 
 // Utility functions remain the same
 const getCurrentDayVerse = (): TargetVerse => {
+  const allVerses: {
+    book: Book;
+    chapterIndex: number;
+    verseIndex: number;
+    text: string;
+  }[] = [];
+
+  VERSES.forEach((book) => {
+    book.chapters.forEach((chapter, chapterIndex) => {
+      chapter.forEach((verse, verseIndex) => {
+        allVerses.push({
+          book,
+          chapterIndex,
+          verseIndex,
+          text: verse,
+        });
+      });
+    });
+  });
+
+  // Utiliser le timestamp pour sélectionner un verset
   const currentDate = new Date(getCurrentDate());
   const timestamp = currentDate.getTime();
-  const bookIndex = timestamp % VERSES.length;
+  const verseIndex = timestamp % allVerses.length;
 
-  const book = VERSES[bookIndex];
-  const chapterIndex = timestamp % book.chapters.length;
-  const chapter = book.chapters[chapterIndex];
-  const verseIndex = timestamp % chapter.length;
+  const selectedVerse = allVerses[verseIndex];
+  const { book, chapterIndex, verseIndex: verse, text } = selectedVerse;
 
   return {
     book: book.name,
     abbrev: book.abbrev,
     chapter: chapterIndex + 1,
-    verse: verseIndex + 1,
-    text: chapter[verseIndex],
-    reference: `${book.name} ${chapterIndex + 1}:${verseIndex + 1}`,
-    input: `${book?.abbrev} ${chapterIndex + 1}:${verseIndex + 1}`,
+    verse: verse + 1,
+    text,
+    reference: `${book.name} ${chapterIndex + 1}:${verse + 1}`,
+    input: `${book.abbrev} ${chapterIndex + 1}:${verse + 1}`,
   };
 };
 

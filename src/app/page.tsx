@@ -199,25 +199,50 @@ export default function Home() {
         ) : (
           <div className="mb-6 md:mb-8 p-4 md:p-6 bg-emerald-100 dark:bg-emerald-900 rounded-xl shadow-lg text-center">
             <h2 className="text-xl md:text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-2">
-              Félicitations !
+              {targetSaint?.name === "Judas Iscariote"
+                ? "Personnage trouvé !"
+                : "Félicitations !"}
             </h2>
             <p className="text-sm md:text-base text-emerald-700 dark:text-emerald-300 mb-4">
-              Vous avez trouvé le saint en {guesses.length} essai
+              Vous avez trouvé{" "}
+              {targetSaint?.name === "Judas Iscariote"
+                ? "le personnage"
+                : "le saint"}{" "}
+              en {guesses.length} essai
               {guesses.length > 1 ? "s" : ""} !
             </p>
             <div className="text-emerald-700 dark:text-emerald-300 space-y-2">
-              <p className="font-semibold text-base md:text-lg">
-                Saint {targetSaint!.name}
-              </p>
-              <p className="text-sm md:text-base">
-                Fêté le {targetSaint!.feastDay}
-              </p>
-              <p className="text-sm md:text-base">
-                Saint patron : {targetSaint!.patronage}
-              </p>
-              <p className="text-sm md:text-base">
-                Attributs : {targetSaint!.attributes}
-              </p>
+              {targetSaint?.name === "Judas Iscariote" ? (
+                <>
+                  <p className="font-semibold text-base md:text-lg">
+                    {targetSaint?.name}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Période : {targetSaint?.period}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Rôle : {targetSaint?.role}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Attributs : {targetSaint?.attributes}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="font-semibold text-base md:text-lg">
+                    Saint {targetSaint?.name}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Fêté le {targetSaint?.feastDay}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Saint patron : {targetSaint?.patronage}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Attributs : {targetSaint?.attributes}
+                  </p>
+                </>
+              )}
             </div>
           </div>
         )}
