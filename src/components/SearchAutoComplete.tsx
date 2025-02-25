@@ -32,13 +32,16 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
   useEffect(() => {
     if (value.trim()) {
       const normalizedSearch = normalizeString(value);
-      const filtered = saints.filter((saint) => {
-        const normalizedName = normalizeString(saint.name);
-        return (
-          !guessedSaints.includes(saint.name) &&
-          normalizedName.startsWith(normalizedSearch)
-        );
-      });
+      const filtered = saints
+        .filter((saint) => {
+          const normalizedName = normalizeString(saint.name);
+          return (
+            !guessedSaints.includes(saint.name) &&
+            normalizedName.startsWith(normalizedSearch)
+          );
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
       setFilteredSaints(filtered);
       setShowSuggestions(true);
     } else {

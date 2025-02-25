@@ -455,45 +455,6 @@
     "description": "Libérateur du peuple hébreu de l'esclavage en Égypte, Moïse reçut de Dieu les Dix Commandements sur le mont Sinaï. Figure centrale de l'Ancien Testament, il conduisit le peuple pendant quarante ans dans le désert, établissant l'alliance entre Dieu et Israël. Son humilité, malgré son rôle exceptionnel, est soulignée dans les textes bibliques. Il mourut en vue de la Terre Promise sans y entrer. Sa vie illustre le leadership spirituel et la fidélité à la mission divine malgré les obstacles."
   },
   {
-    "name": "David",
-    "period": "10e siècle av. J.-C.",
-    "origin": "Bethléem, Palestine",
-    "role": "Roi, Prophète",
-    "patronage": "Musiciens, Poètes",
-    "attributes": "Harpe, Couronne",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "29 décembre",
-    "type": "Biblique",
-    "description": "Berger devenu roi d'Israël, David est célèbre pour sa victoire sur Goliath et son talent de musicien-poète. Auteur présumé de nombreux psaumes, il établit Jérusalem comme capitale et y fit transporter l'Arche d'Alliance. Malgré ses péchés (notamment l'affaire Bethsabée), son repentir sincère et sa relation profonde avec Dieu en font un modèle de conversion. La promesse divine d'une dynastie éternelle trouve son accomplissement en Jésus, 'fils de David'. Son règne est considéré comme l'âge d'or d'Israël."
-  },
-  {
-    "name": "Élie",
-    "period": "9e siècle av. J.-C.",
-    "origin": "Tishbé, Palestine",
-    "role": "Prophète",
-    "patronage": "Carmel",
-    "attributes": "Char de feu, Corbeau",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "20 juillet",
-    "type": "Biblique",
-    "description": "Grand prophète d'Israël, Élie défendit le monothéisme contre le culte de Baal. Son duel avec les prophètes de Baal sur le Mont Carmel est resté célèbre. Nourri miraculeusement par des corbeaux, il ressuscita le fils d'une veuve et fut enlevé au ciel dans un char de feu. Il apparaît avec Moïse lors de la Transfiguration du Christ. Sa vie de solitude, de prière et de combat spirituel a inspiré l'ordre des Carmes. Il est attendu pour revenir avant le jour du Seigneur."
-  },
-  {
-    "name": "Isaïe",
-    "period": "8e siècle av. J.-C.",
-    "origin": "Jérusalem, Palestine",
-    "role": "Prophète",
-    "patronage": "Prophètes",
-    "attributes": "Rouleau, Scie",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "9 mai",
-    "type": "Biblique",
-    "description": "L'un des plus grands prophètes de l'Ancien Testament, Isaïe reçut sa vocation dans une vision grandiose du Seigneur au Temple. Ses prophéties sur le Messie souffrant (le 'Serviteur de Yahvé') sont particulièrement importantes pour la tradition chrétienne. Son livre contient des textes majeurs sur l'espérance messianique et la justice sociale. Selon la tradition, il fut martyrisé en étant scié en deux sous le roi Manassé. Son éloquence et la beauté de ses textes lui ont valu d'être appelé le 'Shakespeare des prophètes'."
-  },
-  {
     "name": "Jérémie",
     "period": "7e-6e siècle av. J.-C.",
     "origin": "Anathoth, Palestine",
@@ -505,19 +466,6 @@
     "feastDay": "1er mai",
     "type": "Biblique",
     "description": "Prophète de malheur malgré lui, Jérémie annonça la destruction de Jérusalem et l'exil à Babylone. Persécuté pour ses oracles, emprisonné et jeté dans une citerne, il resta fidèle à sa mission. Ses 'Confessions' révèlent ses luttes intérieures et sa souffrance d'être rejeté par son peuple. Il prêcha la conversion intérieure et annonça une nouvelle alliance inscrite dans les cœurs. Témoin de la chute de Jérusalem, il termina sa vie en Égypte avec les réfugiés judéens."
-  },
-  {
-    "name": "Daniel",
-    "period": "6e siècle av. J.-C.",
-    "origin": "Jérusalem, Palestine",
-    "role": "Prophète",
-    "patronage": "Sagesse",
-    "attributes": "Lions, Fosse",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "21 juillet",
-    "type": "Biblique",
-    "description": "Déporté à Babylone, Daniel se distingua par sa sagesse et son don d'interpréter les songes. Il resta fidèle à sa foi malgré les pressions de la cour babylonienne. Jeté dans la fosse aux lions pour avoir prié Dieu contre l'édit royal, il fut miraculeusement préservé. Ses visions apocalyptiques ont profondément influencé la littérature juive et chrétienne. Son livre mêle récits édifiants et prophéties sur la succession des empires et la venue du Royaume de Dieu."
   },
   {
     "name": "Anne",
@@ -546,19 +494,6 @@
     "description": "Époux d'Anne et père de la Vierge Marie, Joachim n'est connu que par la tradition et les évangiles apocryphes. Homme juste et pieux, il souffrait de ne pas avoir d'enfant, ce qui était considéré comme une malédiction à l'époque. Après une période de jeûne et de prière dans le désert, il reçut l'annonce de la naissance miraculeuse de Marie. Son histoire souligne l'importance de la persévérance dans la prière et la confiance en Dieu malgré les épreuves."
   },
   {
-    "name": "Marthe",
-    "period": "1er siècle",
-    "origin": "Béthanie, Palestine",
-    "role": "Hôte du Christ",
-    "patronage": "Cuisiniers, Hôteliers",
-    "attributes": "Goupillon, Dragon",
-    "canonization": "Culte immémorial",
-    "gender": "Femme",
-    "feastDay": "29 juillet",
-    "type": "Biblique",
-    "description": "Sœur de Marie et de Lazare, Marthe accueillait souvent Jésus dans sa maison de Béthanie. L'épisode où Jésus lui rappelle que 'Marie a choisi la meilleure part' est devenu symbole de l'équilibre entre action et contemplation. Sa profession de foi lors de la résurrection de Lazare est l'une des plus belles du Nouveau Testament. Selon la tradition provençale, elle aurait évangélisé la région de Tarascon où elle aurait maîtrisé un dragon local, la Tarasque."
-  },
-  {
     "name": "Lazare",
     "period": "1er siècle",
     "origin": "Béthanie, Palestine",
@@ -583,32 +518,6 @@
     "feastDay": "23 avril",
     "type": "Ancien",
     "description": "Officier romain martyrisé sous Dioclétien, Georges est devenu l'un des saints les plus populaires de la chrétienté. La légende du dragon qu'il aurait vaincu pour sauver une princesse symbolise la victoire de la foi sur le mal. Son culte s'est particulièrement développé pendant les croisades, et il est devenu le saint patron de nombreux pays et régions, notamment l'Angleterre. Son courage face au martyre et sa défense des opprimés en ont fait un modèle de chevalerie chrétienne."
-  },
-  {
-    "name": "Cécile",
-    "period": "3e siècle",
-    "origin": "Rome, Italie",
-    "role": "Martyr",
-    "patronage": "Musique, Musiciens",
-    "attributes": "Orgue, Harpe, Lys",
-    "canonization": "Culte immémorial",
-    "gender": "Femme",
-    "feastDay": "22 novembre",
-    "type": "Ancien",
-    "description": "Jeune patricienne romaine, Cécile fut mariée contre son gré mais convertit son époux Valérien au christianisme. Condamnée à mort pour sa foi, elle survécut miraculeusement à plusieurs tentatives d'exécution avant de succomber. La tradition rapporte qu'elle 'chantait dans son cœur' pendant son martyre, ce qui en a fait la patronne des musiciens. Son corps intact fut découvert au XVIe siècle dans les catacombes de Rome. De nombreuses compositions musicales lui sont dédiées."
-  },
-  {
-    "name": "Christophe",
-    "period": "3e siècle",
-    "origin": "Canaan",
-    "role": "Martyr",
-    "patronage": "Voyageurs, Automobilistes",
-    "attributes": "Enfant Jésus sur l'épaule, Bâton",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "25 juillet",
-    "type": "Ancien",
-    "description": "Selon la légende, Christophe était un géant qui cherchait à servir le plus puissant des maîtres. Il devint passeur sur une rivière et un jour porta un enfant qui s'avéra être le Christ, d'où son nom signifiant 'porte-Christ'. Le poids de l'enfant, aussi lourd que le monde dont il est le Sauveur, fait comprendre à Christophe qu'il sert désormais le Roi des rois. Bien que son historicité soit incertaine, son culte s'est largement répandu, notamment comme protecteur des voyageurs."
   },
   {
     "name": "David",
@@ -650,19 +559,6 @@
     "description": "L'un des plus grands prophètes de l'Ancien Testament, Isaïe reçut sa vocation dans une vision grandiose du Seigneur au Temple. Ses prophéties sur le Messie souffrant (le 'Serviteur de Yahvé') sont particulièrement importantes pour la tradition chrétienne. Son livre contient des textes majeurs sur l'espérance messianique et la justice sociale. Selon la tradition, il fut martyrisé en étant scié en deux sous le roi Manassé. Son éloquence et la beauté de ses textes lui ont valu d'être appelé le 'Shakespeare des prophètes'."
   },
   {
-    "name": "Jérémie",
-    "period": "7e-6e siècle av. J.-C.",
-    "origin": "Anathoth, Palestine",
-    "role": "Prophète",
-    "patronage": "Prédicateurs",
-    "attributes": "Chaînes, Rouleau",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "1er mai",
-    "type": "Biblique",
-    "description": "Prophète de malheur malgré lui, Jérémie annonça la destruction de Jérusalem et l'exil à Babylone. Persécuté pour ses oracles, emprisonné et jeté dans une citerne, il resta fidèle à sa mission. Ses 'Confessions' révèlent ses luttes intérieures et sa souffrance d'être rejeté par son peuple. Il prêcha la conversion intérieure et annonça une nouvelle alliance inscrite dans les cœurs. Témoin de la chute de Jérusalem, il termina sa vie en Égypte avec les réfugiés judéens."
-  },
-  {
     "name": "Daniel",
     "period": "6e siècle av. J.-C.",
     "origin": "Jérusalem, Palestine",
@@ -676,32 +572,6 @@
     "description": "Déporté à Babylone, Daniel se distingua par sa sagesse et son don d'interpréter les songes. Il resta fidèle à sa foi malgré les pressions de la cour babylonienne. Jeté dans la fosse aux lions pour avoir prié Dieu contre l'édit royal, il fut miraculeusement préservé. Ses visions apocalyptiques ont profondément influencé la littérature juive et chrétienne. Son livre mêle récits édifiants et prophéties sur la succession des empires et la venue du Royaume de Dieu."
   },
   {
-    "name": "Anne",
-    "period": "1er siècle av. J.-C.",
-    "origin": "Bethléem, Palestine",
-    "role": "Parent de Marie",
-    "patronage": "Grand-mères, Ménagères",
-    "attributes": "Livre, Manteau",
-    "canonization": "Culte immémorial",
-    "gender": "Femme",
-    "feastDay": "26 juillet",
-    "type": "Biblique",
-    "description": "Mère de la Vierge Marie, Anne est absente des évangiles canoniques mais sa vie est décrite dans les évangiles apocryphes. Selon la tradition, elle et son époux Joachim étaient stériles et âgés quand Dieu leur accorda miraculeusement une fille, Marie. Son culte s'est développé à partir du VIe siècle, particulièrement en Orient. Elle est souvent représentée enseignant à lire à Marie, ce qui en fait la patronne des éducateurs. Son exemple inspire les grands-parents dans leur rôle de transmission de la foi."
-  },
-  {
-    "name": "Joachim",
-    "period": "1er siècle av. J.-C.",
-    "origin": "Nazareth, Palestine",
-    "role": "Parent de Marie",
-    "patronage": "Grands-pères, Pères",
-    "attributes": "Bâton, Colombes",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "26 juillet",
-    "type": "Biblique",
-    "description": "Époux d'Anne et père de la Vierge Marie, Joachim n'est connu que par la tradition et les évangiles apocryphes. Homme juste et pieux, il souffrait de ne pas avoir d'enfant, ce qui était considéré comme une malédiction à l'époque. Après une période de jeûne et de prière dans le désert, il reçut l'annonce de la naissance miraculeuse de Marie. Son histoire souligne l'importance de la persévérance dans la prière et la confiance en Dieu malgré les épreuves."
-  },
-  {
     "name": "Marthe",
     "period": "1er siècle",
     "origin": "Béthanie, Palestine",
@@ -713,32 +583,6 @@
     "feastDay": "29 juillet",
     "type": "Biblique",
     "description": "Sœur de Marie et de Lazare, Marthe accueillait souvent Jésus dans sa maison de Béthanie. L'épisode où Jésus lui rappelle que 'Marie a choisi la meilleure part' est devenu symbole de l'équilibre entre action et contemplation. Sa profession de foi lors de la résurrection de Lazare est l'une des plus belles du Nouveau Testament. Selon la tradition provençale, elle aurait évangélisé la région de Tarascon où elle aurait maîtrisé un dragon local, la Tarasque."
-  },
-  {
-    "name": "Lazare",
-    "period": "1er siècle",
-    "origin": "Béthanie, Palestine",
-    "role": "Ami du Christ",
-    "patronage": "Fossoyeurs",
-    "attributes": "Tombeau, Suaire",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "29 juillet",
-    "type": "Biblique",
-    "description": "Frère de Marthe et Marie, Lazare est célèbre pour avoir été ressuscité par Jésus après quatre jours au tombeau, dernier et plus grand miracle avant la Passion. Cet événement provoqua la décision des autorités juives de faire mourir Jésus. Selon la tradition provençale, il devint le premier évêque de Marseille après avoir fui la persécution en Palestine. Sa résurrection est vue comme un signe de la puissance du Christ sur la mort et une préfiguration de la résurrection finale."
-  },
-  {
-    "name": "Georges",
-    "period": "3e siècle",
-    "origin": "Cappadoce, Turquie",
-    "role": "Martyr",
-    "patronage": "Chevaliers, Angleterre",
-    "attributes": "Dragon, Lance, Armure",
-    "canonization": "Culte immémorial",
-    "gender": "Homme",
-    "feastDay": "23 avril",
-    "type": "Ancien",
-    "description": "Officier romain martyrisé sous Dioclétien, Georges est devenu l'un des saints les plus populaires de la chrétienté. La légende du dragon qu'il aurait vaincu pour sauver une princesse symbolise la victoire de la foi sur le mal. Son culte s'est particulièrement développé pendant les croisades, et il est devenu le saint patron de nombreux pays et régions, notamment l'Angleterre. Son courage face au martyre et sa défense des opprimés en ont fait un modèle de chevalerie chrétienne."
   },
   {
     "name": "Cécile",
