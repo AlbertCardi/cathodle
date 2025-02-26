@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { gameStorage } from "@/lib/gameStorage";
-import { compareDates, getCurrentDate } from "@/lib/utils";
+import {
+  compareDates,
+  getCurrentDate,
+  getDayOfYearTimestamp,
+} from "@/lib/utils";
 import BibleReferenceDropdown from "@/components/BibleReferenceDropdown";
 import { ChevronUp, ChevronDown, CheckCircle, XCircle } from "lucide-react";
 import VERSES from "@/constants/verses.json";
@@ -30,10 +34,8 @@ const getCurrentDayVerse = (): TargetVerse => {
     });
   });
 
-  // Utiliser le timestamp pour sélectionner un verset
-  const currentDate = new Date(getCurrentDate());
-  const timestamp = currentDate.getTime();
-  const verseIndex = timestamp % allVerses.length;
+  const dayOfYear = getDayOfYearTimestamp();
+  const verseIndex = dayOfYear % allVerses.length;
 
   const selectedVerse = allVerses[verseIndex];
   const { book, chapterIndex, verseIndex: verse, text } = selectedVerse;

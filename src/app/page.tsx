@@ -5,6 +5,7 @@ import {
   compareDates,
   feastDayToDate,
   getCurrentDate,
+  getDayOfYearTimestamp,
   hasCommonElement,
   normalizeString,
 } from "@/lib/utils";
@@ -35,10 +36,11 @@ export default function Home() {
           setIncorrectGuesses(savedState.incorrectGuesses);
         }
       }
-      const currentDate = new Date(getCurrentDate());
-      const timestamp = currentDate.getTime();
-      const index = timestamp % SAINTS.length;
+      const dayOfYear = getDayOfYearTimestamp();
+      const index = dayOfYear % SAINTS.length;
       const newTargetSaint = SAINTS[index];
+
+      console.log(dayOfYear);
       setTargetSaint(newTargetSaint);
       gameStorage.saveTargetSaint(newTargetSaint);
     };

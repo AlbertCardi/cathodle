@@ -88,3 +88,22 @@ export const compareDates = (dateA: string, dateB: string): number => {
   if (a > b) return 1;
   return 0;
 };
+
+export const getDayOfYearTimestamp = () => {
+  const date = new Date();
+  const midnightUTC = new Date(
+    Date.UTC(
+      date.getUTCFullYear(),
+      date.getUTCMonth(),
+      date.getUTCDate(),
+      0,
+      0,
+      0
+    )
+  );
+
+  const startOfYear = new Date(Date.UTC(midnightUTC.getUTCFullYear(), 0, 0));
+  const diff = midnightUTC.getTime() - startOfYear.getTime();
+
+  return Math.floor(diff / 86400000);
+};
