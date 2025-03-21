@@ -8,6 +8,7 @@ import {
   getDayOfYearTimestamp,
   hasCommonElement,
   normalizeString,
+  seedRandom,
 } from "@/lib/utils";
 import SearchAutocomplete from "@/components/SearchAutoComplete";
 import AnimatedGuessTable from "@/components/AnimatedGuessTable";
@@ -26,6 +27,7 @@ export default function Home() {
   // Load game state from cookies on initial render
   useEffect(() => {
     const initializeGame = () => {
+      // Check if there's a saved game for today
       if (gameStorage.hasVerseGame()) {
         const savedState = gameStorage.loadSaintGameState();
 
@@ -34,15 +36,40 @@ export default function Home() {
           setGuesses(savedState.guesses);
           setGameWon(savedState.currentStep !== 0);
           setIncorrectGuesses(savedState.incorrectGuesses);
+          return; // Exit early if we loaded a valid saved game
         }
       }
-      const dayOfYear = getDayOfYearTimestamp();
-      const index = dayOfYear % SAINTS.length;
-      const newTargetSaint = SAINTS[index];
 
-      console.log(dayOfYear);
+      // Create a seed based on day and year for pseudo-random selection
+      const today = new Date();
+      const dayOfYear = getDayOfYearTimestamp();
+      const year = today.getUTCFullYear();
+
+      // Use different prime numbers than the verse selector to ensure
+      // saints and verses don't follow the same pattern
+      const seed = dayOfYear * 61997 + year * 104729;
+      const random = seedRandom(seed);
+
+      // Select a random saint for today
+      const saintIndex = Math.floor(random() * SAINTS.length);
+      const newTargetSaint = SAINTS[saintIndex];
+
       setTargetSaint(newTargetSaint);
       gameStorage.saveTargetSaint(newTargetSaint);
+
+      // Reset the game state
+      setGuesses([]);
+      setGameWon(false);
+      setIncorrectGuesses(0);
+
+      // Save the complete new game state
+      gameStorage.saveSaintGameState({
+        targetSaint: newTargetSaint,
+        guesses: [],
+        currentStep: 0,
+        currentDay: getCurrentDate(),
+        incorrectGuesses: 0,
+      });
     };
 
     initializeGame();

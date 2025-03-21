@@ -6,6 +6,7 @@ import {
   compareDates,
   getCurrentDate,
   getDayOfYearTimestamp,
+  seedRandom,
 } from "@/lib/utils";
 import BibleReferenceDropdown from "@/components/BibleReferenceDropdown";
 import { ChevronUp, ChevronDown, CheckCircle, XCircle } from "lucide-react";
@@ -14,40 +15,56 @@ import VersetsInstructions from "@/components/VersetsInstructions";
 
 // Utility functions remain the same
 const getCurrentDayVerse = (): TargetVerse => {
-  const allVerses: {
-    book: Book;
-    chapterIndex: number;
-    verseIndex: number;
-    text: string;
-  }[] = [];
-
-  VERSES.forEach((book) => {
-    book.chapters.forEach((chapter, chapterIndex) => {
-      chapter.forEach((verse, verseIndex) => {
-        allVerses.push({
-          book,
-          chapterIndex,
-          verseIndex,
-          text: verse,
-        });
-      });
-    });
-  });
-
+  // Get a stable seed that changes daily and yearly
+  const today = new Date();
   const dayOfYear = getDayOfYearTimestamp();
-  const verseIndex = dayOfYear % allVerses.length;
+  const year = today.getUTCFullYear();
 
-  const selectedVerse = allVerses[verseIndex];
-  const { book, chapterIndex, verseIndex: verse, text } = selectedVerse;
+  // Combine day and year to create a unique seed
+  // Use large prime numbers to create a well-distributed hash
+  const seed = dayOfYear * 73939 + year * 179426321;
+
+  // Create our random generator with the seed
+  const random = seedRandom(seed);
+
+  // Collect all books with their info
+  const books = VERSES.map((book) => ({
+    book,
+    // Create a weight that favors shorter books to ensure they get selected
+    weight: Math.sqrt(
+      1 / book.chapters.reduce((sum, chapter) => sum + chapter.length, 0)
+    ),
+  }));
+
+  // Select a book using weighted random
+  const totalWeight = books.reduce((sum, book) => sum + book.weight, 0);
+  let randomValue = random() * totalWeight;
+  let selectedBook = books[0].book;
+
+  for (const bookData of books) {
+    randomValue -= bookData.weight;
+    if (randomValue <= 0) {
+      selectedBook = bookData.book;
+      break;
+    }
+  }
+
+  // Select a chapter randomly from the book
+  const chapterIndex = Math.floor(random() * selectedBook.chapters.length);
+  const chapter = selectedBook.chapters[chapterIndex];
+
+  // Select a verse randomly from the chapter
+  const verseIndex = Math.floor(random() * chapter.length);
+  const text = chapter[verseIndex];
 
   return {
-    book: book.name,
-    abbrev: book.abbrev,
+    book: selectedBook.name,
+    abbrev: selectedBook.abbrev,
     chapter: chapterIndex + 1,
-    verse: verse + 1,
+    verse: verseIndex + 1,
     text,
-    reference: `${book.name} ${chapterIndex + 1}:${verse + 1}`,
-    input: `${book.abbrev} ${chapterIndex + 1}:${verse + 1}`,
+    reference: `${selectedBook.name} ${chapterIndex + 1}:${verseIndex + 1}`,
+    input: `${selectedBook.abbrev} ${chapterIndex + 1}:${verseIndex + 1}`,
   };
 };
 
@@ -168,7 +185,6 @@ export default function VersetsPage() {
         incorrectGuesses: 0,
       });
     };
-
     initializeGame();
   }, []);
 

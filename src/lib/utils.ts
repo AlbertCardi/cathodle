@@ -102,8 +102,20 @@ export const getDayOfYearTimestamp = () => {
     )
   );
 
-  const startOfYear = new Date(Date.UTC(midnightUTC.getUTCFullYear(), 0, 0));
+  const startOfYear = new Date(Date.UTC(midnightUTC.getUTCFullYear(), 0, 1));
   const diff = midnightUTC.getTime() - startOfYear.getTime();
 
   return Math.floor(diff / 86400000);
+};
+
+export const seedRandom = (seed: number) => {
+  // Simple xorshift algorithm
+  let state = seed;
+  return () => {
+    state ^= state << 13;
+    state ^= state >> 17;
+    state ^= state << 5;
+    // Normalize to [0, 1) range
+    return (state >>> 0) / 4294967296;
+  };
 };
